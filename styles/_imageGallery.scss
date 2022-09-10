@@ -1,0 +1,10 @@
+.photo__display {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #00c2f351;
+  height: 85vh;
+  width: 35vw;
+}
