@@ -2,29 +2,18 @@
   display: grid;
   grid-template-columns: 50vw repeat(3, 1fr);
   height: 50px;
-  padding: 2rem;
+  background: none;
+  background-color: transparent;
+  padding: 5px 15px;
+
+  > * {
+    background-color: transparent;
+    color: white;
+    align-self: center;
+    text-align: right;
+  }
 
   &__logo {
-    // background-color: rgb(28, 183, 0);
-    align-self: center;
-    color: white;
-  }
-  &__photography {
-    // background-color: rgb(0, 58, 183);
-    align-self: center;
-    text-align: right;
-    color: white;
-  }
-  &__film {
-    // background-color: rgb(183, 0, 131);
-    align-self: center;
-    text-align: right;
-    color: white;
-  }
-  &__about {
-    // background-color: rgb(183, 174, 0);
-    align-self: center;
-    text-align: right;
-    color: white;
+    text-align: left;
   }
 }
