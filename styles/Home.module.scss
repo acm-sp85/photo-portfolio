@@ -5,6 +5,12 @@
 $color-primary: #f3a200;
 
 .container {
-  background-color: rgb(148, 148, 148);
+  // background-color: rgb(148, 148, 148);
   height: 100vh;
+}
+
+.nav {
+  > * {
+    color: black;
+  }
 }
