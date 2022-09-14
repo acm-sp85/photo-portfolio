@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styles from './../../styles/Home.module.scss';
 
@@ -5,16 +6,16 @@ function NavBar() {
   return (
     <div className={styles.nav}>
       <div className={styles.nav__logo}>
-        <a>ALEX CONTELL</a>
+        <Link href={'/'}>ALEX CONTELL</Link>
       </div>
       <div className={styles.nav__photography}>
-        <a>PHOTOGRAPHY</a>
+        <Link href={'/photography'}>PHOTOGRAPHY</Link>
       </div>
       <div className={styles.nav__film}>
-        <a>FILM</a>
+        <Link href={'/film'}>FILM</Link>
       </div>
       <div className={styles.nav__about}>
-        <a>ABOUT</a>
+        <Link href={'/about'}>ABOUT</Link>
       </div>
     </div>
   );

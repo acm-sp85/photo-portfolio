@@ -2,13 +2,18 @@
   display: grid;
   grid-template-columns: 50vw repeat(3, 1fr);
   height: 50px;
-  background: none;
-  background-color: transparent;
+  
+  // background: none;
+  // background-color: transparent;
+  background-color: rgb(255, 255, 255);
   padding: 5px 15px;
 
   > * {
     background-color: transparent;
     color: white;
+    // filter: invert(1);
+    // the goal is to find something like Divide in photoshop
+    mix-blend-mode: difference;
     align-self: center;
     text-align: right;
   }
