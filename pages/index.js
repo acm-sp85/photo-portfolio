@@ -7,58 +7,60 @@ import ImageGallery from './components/ImageGallery';
 import { search, mapImageResources, getFolders } from '../lib/cloudinary';
 import { uuid } from 'uuidv4';
 
-export default function Home({
-  images: defaultImages,
-  nextCursor: defaultNextCursor,
-  folders,
-}) {
-  const [images, setImages] = useState(defaultImages);
-  const [nextCursor, setNextCursor] = useState(defaultNextCursor);
-  const [activeFolder, setActiveFolder] = useState('');
-
-  async function handleLoadMore(event) {
-    event.preventDefault();
-    const results = await fetch('/api/search', {
-      method: 'POST',
-      body: JSON.stringify({
-        nextCursor,
-        expression: `folder="${activeFolder}"`,
-      }),
-    }).then((r) => r.json());
-
-    const { resources, next_cursor: updatedNextCursor } = results;
-    const images = mapImageResources(resources);
-
-    setImages((prev) => {
-      return [...prev, ...images];
-    });
-    setNextCursor(updatedNextCursor);
+export default function Home(
+  {
+    // images: defaultImages,
+    // nextCursor: defaultNextCursor,
+    // folders,
   }
-  function handleOnFolderClick(event) {
-    const folderPath = event.target.dataset.folderPath;
-    setActiveFolder(folderPath);
-    setNextCursor(undefined);
-    setImages([]);
-  }
+) {
+  // const [images, setImages] = useState(defaultImages);
+  // const [nextCursor, setNextCursor] = useState(defaultNextCursor);
+  // const [activeFolder, setActiveFolder] = useState('');
 
-  useEffect(() => {
-    (async function run() {
-      const results = await fetch('/api/search', {
-        method: 'POST',
-        body: JSON.stringify({
-          nextCursor,
-          expression: `folder="${activeFolder}"`,
-        }),
-      }).then((r) => r.json());
+  // async function handleLoadMore(event) {
+  //   event.preventDefault();
+  //   const results = await fetch('/api/search', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       nextCursor,
+  //       expression: `folder="${activeFolder}"`,
+  //     }),
+  //   }).then((r) => r.json());
 
-      const { resources, next_cursor: updatedNextCursor } = results;
-      const images = mapImageResources(resources);
+  //   const { resources, next_cursor: updatedNextCursor } = results;
+  //   const images = mapImageResources(resources);
 
-      setImages((prev) => {
-        return [...prev, ...images];
-      });
-    })();
-  }, [activeFolder]);
+  //   setImages((prev) => {
+  //     return [...prev, ...images];
+  //   });
+  //   setNextCursor(updatedNextCursor);
+  // }
+  // function handleOnFolderClick(event) {
+  //   const folderPath = event.target.dataset.folderPath;
+  //   setActiveFolder(folderPath);
+  //   setNextCursor(undefined);
+  //   setImages([]);
+  // }
+
+  // useEffect(() => {
+  //   (async function run() {
+  //     const results = await fetch('/api/search', {
+  //       method: 'POST',
+  //       body: JSON.stringify({
+  //         nextCursor,
+  //         expression: `folder="${activeFolder}"`,
+  //       }),
+  //     }).then((r) => r.json());
+
+  //     const { resources, next_cursor: updatedNextCursor } = results;
+  //     const images = mapImageResources(resources);
+
+  //     setImages((prev) => {
+  //       return [...prev, ...images];
+  //     });
+  //   })();
+  // }, [activeFolder]);
 
   return (
     <div className={styles.container}>
@@ -90,19 +92,19 @@ export default function Home({
   );
 }
 
-export async function getStaticProps() {
-  const results = await search({
-    expression: 'folder=""',
-  });
+// export async function getStaticProps() {
+//   const results = await search({
+//     expression: 'folder=""',
+//   });
 
-  const { resources, next_cursor: nextCursor } = results;
-  const images = mapImageResources(resources);
+//   const { resources, next_cursor: nextCursor } = results;
+//   const images = mapImageResources(resources);
 
-  console.log(results);
+//   console.log(results);
 
-  const { folders } = await getFolders();
-  console.log(folders);
-  return {
-    props: { images, nextCursor: nextCursor || false, folders },
-  };
-}
+//   const { folders } = await getFolders();
+//   console.log(folders);
+//   return {
+//     props: { images, nextCursor: nextCursor || false, folders },
+//   };
+// }
