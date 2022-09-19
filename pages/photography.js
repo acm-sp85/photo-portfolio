@@ -18,6 +18,7 @@ export default function photography({
   );
 }
 
+// via getStaticProps we are making our API call
 export async function getStaticProps() {
   const results = await search({
     expression: 'folder="photo-portfolio/chicago"',
@@ -26,10 +27,11 @@ export async function getStaticProps() {
   const { resources, next_cursor: nextCursor } = results;
   const images = mapImageResources(resources);
 
-  console.log(results);
+  // console.log(results);
 
-  const { folders } = await getFolders();
-  console.log(folders);
+  // we are passing the folder category to search for sub-folders
+  const { folders } = await getFolders('photo-portfolio');
+  // console.log(folders);
   return {
     props: { images, nextCursor: nextCursor || false, folders },
   };

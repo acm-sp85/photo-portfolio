@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './../../styles/Home.module.scss';
 
-function NavBar() {
+export default function NavBar() {
   return (
     <div className={styles.nav}>
       <div className={styles.nav__logo}>
@@ -20,5 +20,3 @@ function NavBar() {
     </div>
   );
 }
-
-export default NavBar;
