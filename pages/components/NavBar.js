@@ -9,7 +9,7 @@ export default function NavBar() {
         <Link href={'/'}>ALEX CONTELL</Link>
       </div>
       <div className={styles.nav__photography}>
-        <Link href={'/photography'}>PHOTOGRAPHY</Link>
+        <Link href={'/photography-landing'}>PHOTOGRAPHY</Link>
       </div>
       <div className={styles.nav__film}>
         <Link href={'/film'}>FILM</Link>

@@ -5,7 +5,7 @@ import { search, mapImageResources, getFolders } from '../lib/cloudinary';
 import { uuid } from 'uuidv4';
 import Image from 'next/image';
 
-export default function photography({
+export default function photographyLanding({
   images: defaultImages,
   nextCursor: defaultNextCursor,
   folders,
@@ -13,6 +13,9 @@ export default function photography({
   const [images, setImages] = useState(defaultImages);
   return (
     <div>
+      {folders.map((folder) => {
+        return <p>{folder.name}</p>;
+      })}
       <ImageGallery images={images} />
     </div>
   );
