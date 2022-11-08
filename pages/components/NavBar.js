@@ -8,7 +8,14 @@ export default function NavBar() {
       <div className={styles.nav__logo}>
         <Link href={'/'}>ALEX CONTELL</Link>
       </div>
-      <div className={styles.nav__photography}>
+      <div
+        className={styles.nav__photography}
+        onMouseOver={() =>
+          // (document.body.style = 'background: rgb(184, 87, 87)')
+
+          console.log(document.getElementsByClassName('container'))
+        }
+      >
         <Link href={'/photography-landing'}>PHOTOGRAPHY</Link>
       </div>
       <div className={styles.nav__film}>
