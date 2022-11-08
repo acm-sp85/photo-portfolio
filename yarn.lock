@@ -1414,6 +1414,11 @@
   "resolved" "https://registry.npmjs.org/react-responsive-masonry/-/react-responsive-masonry-2.1.6.tgz"
   "version" "2.1.6"
 
+"react-xmasonry@^3.0.6":
+  "integrity" "sha512-FsvEb1SMTVbyZtS/LhIICY0vczKqhzAZIKFvqhFMdEGiCXailJSaStaYqnc428Taxzwn0ju7h/kFs5AU0lo9pA=="
+  "resolved" "https://registry.npmjs.org/react-xmasonry/-/react-xmasonry-3.0.6.tgz"
+  "version" "3.0.6"
+
 "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
