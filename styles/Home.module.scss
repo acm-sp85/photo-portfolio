@@ -7,7 +7,12 @@ $color-primary: #f3a200;
 .container {
   background-image: url('./../public/landing.jpg');
   height: 100vh;
-  margin-top: -50px;
+}
+
+.photo__display {
+  display: flex;
+  position: absolute;
+  top: 50%;
 }
 
 @keyframes comeIn {
@@ -30,4 +35,7 @@ $color-primary: #f3a200;
 
 .card {
   margin: 2px;
+}
+
+.photographyLanding {
 }

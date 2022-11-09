@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: 50vw repeat(3, 1fr);
   height: 50px;
-  
+  z-index: 1;
+
   // background: none;
   // background-color: transparent;
   background-color: rgb(255, 255, 255);
@@ -10,15 +11,21 @@
 
   > * {
     background-color: transparent;
-    color: white;
+    color: rgb(6, 0, 0);
     // filter: invert(1);
     // the goal is to find something like Divide in photoshop
-    mix-blend-mode: difference;
-    align-self: center;
+    // mix-blend-mode: difference;
     text-align: right;
   }
 
   &__logo {
     text-align: left;
+  }
+
+  &__photography {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    z-index: 100;
   }
 }
