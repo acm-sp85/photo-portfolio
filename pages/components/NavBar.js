@@ -23,8 +23,8 @@ export default function NavBar() {
         <Link href={'/photography-landing'}>PHOTOGRAPHY</Link>
         {toggle ? (
           <div className={styles.nav__photography}>
-            <Link href={'/photography-landing'}>chicago</Link>
-            <Link href={'/photography-landing'}>off-white</Link>
+            <Link href={'/gallery/chicago'}>chicago</Link>
+            <Link href={'/gallery/off-white'}>off-white</Link>
           </div>
         ) : (
           <></>
