@@ -7,6 +7,8 @@ $color-primary: #f3a200;
 .container {
   background-image: url('./../public/landing.jpg');
   height: 100vh;
+  transform: translateY(-50px);
+  z-index: -100;
 }
 
 .photo__display {

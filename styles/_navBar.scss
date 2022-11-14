@@ -6,22 +6,28 @@
 
   background: none;
   background-color: transparent;
+  // background-color: white;
   padding: 5px 15px;
 
   > * {
     background-color: transparent;
-    color: rgb(6, 0, 0);
+    color: rgb(201, 201, 201);
+    // color: black;
     // filter: invert(1);
     // the goal is to find something like Divide in photoshop
-    // mix-blend-mode: difference;
+    mix-blend-mode: difference;
+    align-self: baseline;
     text-align: right;
   }
 
   &__logo {
     text-align: left;
+    z-index: 100;
   }
 
-  &__photography {
+  &__photography,
+  &__film,
+  &__about {
     display: grid;
     justify-items: center;
     align-items: center;
