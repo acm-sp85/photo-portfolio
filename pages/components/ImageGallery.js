@@ -6,17 +6,21 @@ import Image from 'next/image';
 import { XMasonry, XBlock } from 'react-xmasonry';
 
 export default function ImageGallery(props) {
-  const [images, setImages] = useState(props.images);
+  let [photos, setPhotos] = useState(props.images);
+
+  useEffect(() => {
+    setPhotos(props.images);
+  }, [props]);
+
   return (
     <div>
-
       <XMasonry
         maxColumns={3}
         responsive={true}
         smartUpdate={true}
         className={styles.photo__display}
       >
-        {images.map((image) => {
+        {photos.map((image) => {
           return (
             <XBlock key={uuid()}>
               <div className={styles.card}>

@@ -23,8 +23,9 @@ export default function NavBar() {
         <Link href={'/photography-landing'}>PHOTOGRAPHY</Link>
         {toggle ? (
           <div className={styles.nav__photography}>
-            <Link href={'/gallery/chicago'}>chicago</Link>
-            <Link href={'/gallery/off-white'}>off-white</Link>
+            <Link href={'/gallery/portraits'}>portraits</Link>
+            <Link href={'/gallery/street'}>street</Link>
+            <Link href={'/gallery/style'}>style</Link>
           </div>
         ) : (
           <></>

@@ -1,22 +1,21 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
+import ImageGallery from '../components/ImageGallery';
 
 export default function Gallery({ images, nextCursor, folders }) {
-  const router = useRouter();
-  const folder = router.query.slug;
-  const [routi, setRouti] = useState('chicago');
+  let router = useRouter();
+  let folder = router.query.slug;
+  let [photosToDisplay, setPhotosToDisplay] = useState(images);
 
   {
     folder && console.log('the folder is: ' + folder);
   }
 
-  useEffect(() => {});
-
   return (
     <div>
-      <p>Gallery</p>
-      <p>{router.query.slug}</p>
+      <h1>{router.query.slug}</h1>
+      <ImageGallery images={images} />
     </div>
   );
 }
@@ -41,7 +40,11 @@ export async function getStaticProps(context) {
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { slug: 'chicago' } }, { params: { slug: 'off-white' } }],
+    paths: [
+      { params: { slug: 'portraits' } },
+      { params: { slug: 'street' } },
+      { params: { slug: 'style' } },
+    ],
     fallback: false,
   };
 }
