@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 import ImageGallery from '../components/ImageGallery';
+import styles from '../../styles/Home.module.scss';
 
 export default function Gallery({ images, nextCursor, folders }) {
   let router = useRouter();
@@ -14,7 +15,7 @@ export default function Gallery({ images, nextCursor, folders }) {
 
   return (
     <div>
-      <h1>{router.query.slug}</h1>
+      <h1 className={styles.sectionTitle}>{router.query.slug}</h1>
       <ImageGallery images={images} />
     </div>
   );

@@ -4,6 +4,7 @@ import styles from './../../styles/Home.module.scss';
 import { uuid } from 'uuidv4';
 import Image from 'next/image';
 import { XMasonry, XBlock } from 'react-xmasonry';
+import Carousel from './Carousel';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
@@ -14,7 +15,7 @@ export default function ImageGallery(props) {
 
   return (
     <div>
-      <XMasonry
+      {/* <XMasonry
         maxColumns={3}
         responsive={true}
         smartUpdate={true}
@@ -34,7 +35,8 @@ export default function ImageGallery(props) {
             </XBlock>
           );
         })}
-      </XMasonry>
+      </XMasonry> */}
+      <Carousel photos={photos} />
     </div>
   );
 }
