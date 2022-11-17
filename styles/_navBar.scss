@@ -29,8 +29,13 @@
   &__film,
   &__about {
     display: grid;
-    justify-items: center;
     align-items: center;
     z-index: 100;
+    &__items {
+      z-index: 100;
+      // justify-content: center;
+      text-align: center;
+      display: grid;
+    }
   }
 }

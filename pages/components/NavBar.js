@@ -22,7 +22,7 @@ export default function NavBar() {
       >
         <Link href={'/photography-landing'}>PHOTOGRAPHY</Link>
         {toggle ? (
-          <div className={styles.nav__photography}>
+          <div className={styles.nav__photography__items}>
             <Link href={'/gallery/portraits'}>portraits</Link>
             <Link href={'/gallery/street'}>street</Link>
             <Link href={'/gallery/style'}>style</Link>
