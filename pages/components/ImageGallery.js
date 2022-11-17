@@ -36,7 +36,7 @@ export default function ImageGallery(props) {
           );
         })}
       </XMasonry> */}
-      <Carousel photos={photos} />
+      <Carousel photos={photos} style={{ maxWidth: '16px' }} />
     </div>
   );
 }
