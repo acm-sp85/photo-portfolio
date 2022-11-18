@@ -5,10 +5,17 @@
 $color-primary: #f3a200;
 
 .container {
-  background-image: url('./../public/landing.jpg');
+  background-image: url('./../public/temp-01.gif');
   height: 100vh;
   transform: translateY(-50px);
   z-index: -100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  object-fit: fill;
+  transform: scale(1.2);
 }
 
 .photo__display {
