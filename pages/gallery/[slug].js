@@ -9,10 +9,6 @@ export default function Gallery({ images, nextCursor, folders }) {
   let folder = router.query.slug;
   let [photosToDisplay, setPhotosToDisplay] = useState(images);
 
-  {
-    folder && console.log('the folder is: ' + folder);
-  }
-
   return (
     <div>
       <h1 className={styles.sectionTitle}>{router.query.slug}</h1>

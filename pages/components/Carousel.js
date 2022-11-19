@@ -5,12 +5,9 @@ import { useState, useEffect } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-export default function DemoCarousel({ photos }) {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    setCounter(0);
-  }, [photos]);
+export default function Carousel({ photos, gridSwitch }) {
+  let [counter, setCounter] = useState(2);
+  let [images, setImages] = useState(photos);
 
   useEffect(() => {
     const keyDownHandler = (e) => {
@@ -45,20 +42,28 @@ export default function DemoCarousel({ photos }) {
         left arrow
       </KeyboardArrowLeftIcon>
 
-      <Image
-        width={photos[counter].width}
-        height={photos[counter].height}
-        src={photos[counter].image}
-        alt={photos[counter].id}
-        className={styles.carouselImage}
-      />
-      <KeyboardArrowRightIcon
-        onClick={() => goRight()}
-        className={styles.arrows}
-        style={{ fontSize: 'large' }}
-      >
-        right arrow
-      </KeyboardArrowRightIcon>
+      {images && counter && (
+        <div>
+          {' '}
+          <Image
+            width={images[counter].width}
+            height={images[counter].height}
+            src={images[counter].image}
+            alt={images[counter].id}
+            className={styles.carouselImage}
+            onClick={(e) => {
+              gridSwitch();
+            }}
+          />
+          <KeyboardArrowRightIcon
+            onClick={() => goRight()}
+            className={styles.arrows}
+            style={{ fontSize: 'large' }}
+          >
+            right arrow
+          </KeyboardArrowRightIcon>
+        </div>
+      )}
     </div>
   );
 }

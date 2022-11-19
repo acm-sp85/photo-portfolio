@@ -10,7 +10,8 @@ import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
-  const [showGrid, setShowGrid] = useState(false);
+  const [showGrid, setShowGrid] = useState(true);
+  let [startingPoint, setStartingPoint] = useState(-1);
 
   useEffect(() => {
     setPhotos(props.images);
@@ -18,6 +19,8 @@ export default function ImageGallery(props) {
   useEffect(() => {
     setShowGrid(false);
   }, [photos]);
+
+  useEffect(() => {}, [startingPoint]);
 
   const gridSwitch = () => {
     setShowGrid(!showGrid);
@@ -39,6 +42,7 @@ export default function ImageGallery(props) {
           className={styles.photo__display}
         >
           {photos.map((image) => {
+            startingPoint++;
             return (
               <XBlock key={uuid()}>
                 <div className={styles.card}>
@@ -46,7 +50,12 @@ export default function ImageGallery(props) {
                     width={image.width}
                     height={image.height}
                     src={image.image}
-                    alt={image.id}
+                    alt={startingPoint} //adding a counter to be know which image we clicked
+                    onClick={(e) => {
+                      console.log(e.target.alt);
+                      setStartingPoint(e.target.alt);
+                      gridSwitch();
+                    }}
                   />
                 </div>
               </XBlock>
@@ -54,7 +63,14 @@ export default function ImageGallery(props) {
           })}
         </XMasonry>
       )}
-      {!showGrid && <Carousel photos={photos} />}
+      {!showGrid && (
+        <Carousel
+          photos={photos}
+          gridSwitch={gridSwitch}
+          count={startingPoint}
+          // setCount={setStartingPoint}
+        />
+      )}
     </div>
   );
 }
