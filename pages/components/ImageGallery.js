@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from './../../styles/Home.module.scss';
-import { uuid } from 'uuidv4';
+
 import Image from 'next/image';
-import { XMasonry, XBlock } from 'react-xmasonry';
-import Carousel from './Carousel';
+// import { XMasonry, XBlock } from 'react-xmasonry';
+import { Masonry } from '@mui/lab';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 
@@ -35,7 +35,7 @@ export default function ImageGallery(props) {
       )}
 
       {showGrid && (
-        <XMasonry
+        <Masonry
           maxColumns={3}
           responsive={true}
           smartUpdate={true}
@@ -44,7 +44,7 @@ export default function ImageGallery(props) {
           {photos.map((image) => {
             startingPoint++;
             return (
-              <XBlock key={uuid()}>
+              <Item key={startingPoint}>
                 <div className={styles.card}>
                   <Image
                     width={image.width}
@@ -58,18 +58,10 @@ export default function ImageGallery(props) {
                     }}
                   />
                 </div>
-              </XBlock>
+              </Item>
             );
           })}
-        </XMasonry>
-      )}
-      {!showGrid && (
-        <Carousel
-          photos={photos}
-          gridSwitch={gridSwitch}
-          count={startingPoint}
-          // setCount={setStartingPoint}
-        />
+        </Masonry>
       )}
     </div>
   );
