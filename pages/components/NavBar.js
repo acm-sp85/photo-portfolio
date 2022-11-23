@@ -20,7 +20,7 @@ export default function NavBar() {
         }
         onMouseLeave={() => setToggle(false)}
       >
-        <Link href={'/photography-landing'}>PHOTOGRAPHY</Link>
+        <Link href={'/'}>PHOTOGRAPHY</Link>
         {toggle ? (
           <div className={styles.nav__photography__items}>
             <Link href={'/gallery/portraits'}>portraits</Link>

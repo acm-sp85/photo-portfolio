@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 import styles from './../../styles/Home.module.scss';
 
 import Image from 'next/image';
-// import { XMasonry, XBlock } from 'react-xmasonry';
-import { Masonry } from '@mui/lab';
+import { XMasonry, XBlock } from 'react-xmasonry';
+// import { Masonry } from '@mui/lab';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 
@@ -16,9 +16,9 @@ export default function ImageGallery(props) {
   useEffect(() => {
     setPhotos(props.images);
   }, [props]);
-  useEffect(() => {
-    setShowGrid(false);
-  }, [photos]);
+  // useEffect(() => {
+  //   setShowGrid(false);
+  // }, [photos]);
 
   useEffect(() => {}, [startingPoint]);
 
@@ -35,7 +35,7 @@ export default function ImageGallery(props) {
       )}
 
       {showGrid && (
-        <Masonry
+        <XMasonry
           maxColumns={3}
           responsive={true}
           smartUpdate={true}
@@ -44,7 +44,7 @@ export default function ImageGallery(props) {
           {photos.map((image) => {
             startingPoint++;
             return (
-              <Item key={startingPoint}>
+              <XBlock key={startingPoint}>
                 <div className={styles.card}>
                   <Image
                     width={image.width}
@@ -58,10 +58,10 @@ export default function ImageGallery(props) {
                     }}
                   />
                 </div>
-              </Item>
+              </XBlock>
             );
           })}
-        </Masonry>
+        </XMasonry>
       )}
     </div>
   );

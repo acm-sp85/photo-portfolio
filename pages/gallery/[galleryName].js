@@ -6,12 +6,12 @@ import styles from '../../styles/Home.module.scss';
 
 export default function Gallery({ images, nextCursor, folders }) {
   let router = useRouter();
-  let folder = router.query.slug;
+  let folder = router.query.galleryName;
   let [photosToDisplay, setPhotosToDisplay] = useState(images);
 
   return (
     <div>
-      <h1 className={styles.sectionTitle}>{router.query.slug}</h1>
+      <h1 className={styles.sectionTitle}>{router.query.galleryName}</h1>
       <ImageGallery images={images} />
     </div>
   );
@@ -19,9 +19,9 @@ export default function Gallery({ images, nextCursor, folders }) {
 
 // via getStaticProps we are making our API call
 export async function getStaticProps(context) {
-  const slug = context.params.slug;
+  const galleryName = context.params.galleryName;
   const results = await search({
-    expression: `folder="photo-portfolio/${slug}"`,
+    expression: `folder="photo-portfolio/${galleryName}"`,
   });
 
   const { resources, next_cursor: nextCursor } = results;
@@ -38,9 +38,9 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug: 'portraits' } },
-      { params: { slug: 'street' } },
-      { params: { slug: 'style' } },
+      { params: { galleryName: 'portraits' } },
+      { params: { galleryName: 'street' } },
+      { params: { galleryName: 'style' } },
     ],
     fallback: false,
   };
