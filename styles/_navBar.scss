@@ -1,13 +1,15 @@
 .nav {
   display: grid;
   grid-template-columns: 50vw repeat(3, 1fr);
-  height: 50px;
+  height: 20px;
   z-index: 1;
 
   background: none;
   background-color: transparent;
   // background-color: white;
-  padding: 5px 15px;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
 
   > * {
     background-color: transparent;
@@ -34,7 +36,7 @@
     &__items {
       z-index: 100;
       // justify-content: center;
-      text-align: center;
+      text-align: right;
       display: grid;
     }
   }

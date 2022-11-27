@@ -6,21 +6,21 @@ $color-primary: #f3a200;
 
 .container {
   background-image: url('./../public/temp-01.gif');
-  height: 100vh;
+  height: 80vh;
   transform: translateY(-50px);
   z-index: -100;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-
-  object-fit: fill;
-  transform: scale(1.2);
+  object-fit: cover;
+  transform: scale(1.5);
 }
 
 .photo__display {
   display: flex;
   position: absolute;
+  max-width: 500px;
   top: 50%;
 }
 
@@ -46,11 +46,20 @@ $color-primary: #f3a200;
   margin: 2px;
 }
 
-.arrows {
-  margin: 100px;
+.arrows__left {
+  z-index: 100;
   opacity: 0.5;
 }
 
+.arrows__right {
+  z-index: 100;
+  opacity: 0.5;
+  margin-left: auto;
+}
 .icons {
   opacity: 0.5;
+}
+
+.masons {
+  margin-top: 30px;
 }

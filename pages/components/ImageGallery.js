@@ -39,7 +39,7 @@ export default function ImageGallery(props) {
 
       {showGrid && (
         <Box sx={{ width: '100vw', overflowY: 'scroll' }}>
-          <ImageList variant="masonry" cols={3} gap={8}>
+          <ImageList variant="masonry" cols={3} gap={8} className={styles.masons}>
             {photos.map((image) => {
               startingPoint++;
               return (

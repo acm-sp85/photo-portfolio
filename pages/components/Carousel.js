@@ -43,32 +43,37 @@ export default function Carousel({
   };
   return (
     <div className={styles.carouselContainer}>
-      <KeyboardArrowLeftIcon onClick={() => goLeft()} className={styles.arrows}>
+      <KeyboardArrowLeftIcon
+        onClick={() => goLeft()}
+        className={styles.arrows__left}
+        fontSize="large"
+      >
         left arrow
       </KeyboardArrowLeftIcon>
 
       {images && counter >= 0 && (
-        <div>
+        <div className={styles.photo__display}>
           <Image
             width={images[counter].width}
             height={images[counter].height}
+            // layout="fill"
+            // object-position={'50% 50%'}
             src={images[counter].image}
             alt={images[counter].id}
-            className={styles.carouselImage}
             onClick={(e) => {
               setStartingPoint(0);
               gridSwitch();
             }}
           />
-          <KeyboardArrowRightIcon
-            onClick={() => goRight()}
-            className={styles.arrows}
-            style={{ fontSize: 'large' }}
-          >
-            right arrow
-          </KeyboardArrowRightIcon>
         </div>
       )}
+      <KeyboardArrowRightIcon
+        onClick={() => goRight()}
+        className={styles.arrows__right}
+        fontSize="large"
+      >
+        right arrow
+      </KeyboardArrowRightIcon>
     </div>
   );
 }
