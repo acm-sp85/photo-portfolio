@@ -11,7 +11,7 @@ export default function Carousel({
   startingPoint,
   setStartingPoint,
 }) {
-  let [counter, setCounter] = useState(startingPoint);
+  let [counter, setCounter] = useState(startingPoint - 1);
   let [images, setImages] = useState(photos);
 
   useEffect(() => {
@@ -47,9 +47,8 @@ export default function Carousel({
         left arrow
       </KeyboardArrowLeftIcon>
 
-      {images && counter && (
+      {images && counter >= 0 && (
         <div>
-          {counter--}
           <Image
             width={images[counter].width}
             height={images[counter].height}
