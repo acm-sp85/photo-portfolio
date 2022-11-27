@@ -5,8 +5,13 @@ import { useState, useEffect } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-export default function Carousel({ photos, gridSwitch }) {
-  let [counter, setCounter] = useState(2);
+export default function Carousel({
+  photos,
+  gridSwitch,
+  startingPoint,
+  setStartingPoint,
+}) {
+  let [counter, setCounter] = useState(startingPoint);
   let [images, setImages] = useState(photos);
 
   useEffect(() => {
@@ -44,7 +49,7 @@ export default function Carousel({ photos, gridSwitch }) {
 
       {images && counter && (
         <div>
-          {' '}
+          {counter--}
           <Image
             width={images[counter].width}
             height={images[counter].height}
@@ -52,6 +57,7 @@ export default function Carousel({ photos, gridSwitch }) {
             alt={images[counter].id}
             className={styles.carouselImage}
             onClick={(e) => {
+              setStartingPoint(0);
               gridSwitch();
             }}
           />
