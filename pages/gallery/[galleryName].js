@@ -41,6 +41,7 @@ export async function getStaticPaths() {
       { params: { galleryName: 'portraits' } },
       { params: { galleryName: 'street' } },
       { params: { galleryName: 'style' } },
+      { params: { galleryName: 'chicago' } },
     ],
     fallback: false,
   };

@@ -26,6 +26,7 @@ export default function NavBar() {
             <Link href={'/gallery/portraits'}>portraits</Link>
             <Link href={'/gallery/street'}>street</Link>
             <Link href={'/gallery/style'}>style</Link>
+            <Link href={'/gallery/chicago'}>chicago</Link>
           </div>
         ) : (
           <></>
