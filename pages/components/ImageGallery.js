@@ -45,24 +45,25 @@ export default function ImageGallery(props) {
             gap={8}
             className={styles.masons}
           >
-            {photos.map((image) => {
-              startingPoint++;
-              return (
-                <ImageListItem key={image.img}>
-                  <Image
-                    width={image.width}
-                    height={image.height}
-                    src={image.image}
-                    alt={startingPoint} //adding a counter to be know which image we clicked
-                    onClick={(e) => {
-                      setStartingPoint(e.target.alt);
+            {photos &&
+              photos.map((image) => {
+                startingPoint++;
+                return (
+                  <ImageListItem key={image.img}>
+                    <Image
+                      width={image.width}
+                      height={image.height}
+                      src={image.image}
+                      alt={startingPoint} //adding a counter to be know which image we clicked
+                      onClick={(e) => {
+                        setStartingPoint(e.target.alt);
 
-                      gridSwitch();
-                    }}
-                  />
-                </ImageListItem>
-              );
-            })}
+                        gridSwitch();
+                      }}
+                    />
+                  </ImageListItem>
+                );
+              })}
           </ImageList>
           )
         </Box>
