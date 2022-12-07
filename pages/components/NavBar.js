@@ -41,9 +41,9 @@ export default function NavBar() {
         <Link href={'/film'}>FILM</Link>
         {toggleFilms ? (
           <div className={styles.nav__photography__items}>
-            <Link href={'/gallery/portraits'}>GRAIN</Link>
-            <Link href={'/gallery/street'}>ASIAD</Link>
-            <Link href={'/gallery/style'}>ASSIGNMENTS</Link>
+            <Link href={'/films/grain'}>GRAIN</Link>
+            <Link href={'/films/asiad'}>ASIAD</Link>
+            <Link href={'/films/assigments'}>ASSIGNMENTS</Link>
           </div>
         ) : (
           <></>

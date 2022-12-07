@@ -4,6 +4,15 @@
 
 $color-primary: #f3a200;
 
+.centered {
+  margin: auto;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
 .container {
   background-image: url('./../public/temp-01.gif');
   height: 80vh;
