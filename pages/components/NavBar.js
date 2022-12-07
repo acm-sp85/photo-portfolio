@@ -4,7 +4,8 @@ import styles from './../../styles/Home.module.scss';
 import { useState } from 'react';
 
 export default function NavBar() {
-  const [toggle, setToggle] = useState(true);
+  const [togglePhoto, setTogglePhoto] = useState(false);
+  const [toggleFilms, setToggleFilms] = useState(false);
   return (
     <div className={styles.nav}>
       <div className={styles.nav__logo}>
@@ -16,24 +17,37 @@ export default function NavBar() {
           // (document.body.style = 'background: rgb(184, 87, 87)')
 
           // console.log(document.getElementsByClassName('container'))
-          setToggle(!toggle)
+          setTogglePhoto(!togglePhoto)
         }
-        onMouseLeave={() => setToggle(false)}
+        onMouseLeave={() => setTogglePhoto(false)}
       >
         <Link href={'/'}>PHOTOGRAPHY</Link>
-        {toggle ? (
+        {togglePhoto ? (
           <div className={styles.nav__photography__items}>
-            <Link href={'/gallery/portraits'}>portraits</Link>
-            <Link href={'/gallery/street'}>street</Link>
-            <Link href={'/gallery/style'}>style</Link>
-            <Link href={'/gallery/chicago'}>chicago</Link>
+            <Link href={'/gallery/portraits'}>PORTRAITS</Link>
+            <Link href={'/gallery/street'}>STREET</Link>
+            <Link href={'/gallery/style'}>STYLE</Link>
+            <Link href={'/gallery/chicago'}>CHICAGO</Link>
           </div>
         ) : (
           <></>
         )}
       </div>
-      <div className={styles.nav__film}>
+      <div
+        className={styles.nav__film}
+        onMouseEnter={() => setToggleFilms(!toggleFilms)}
+        onMouseLeave={() => setToggleFilms(false)}
+      >
         <Link href={'/film'}>FILM</Link>
+        {toggleFilms ? (
+          <div className={styles.nav__photography__items}>
+            <Link href={'/gallery/portraits'}>GRAIN</Link>
+            <Link href={'/gallery/street'}>ASIAD</Link>
+            <Link href={'/gallery/style'}>ASSIGNMENTS</Link>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
       <div className={styles.nav__about}>
         <Link href={'/about'}>ABOUT</Link>
