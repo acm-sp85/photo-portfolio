@@ -13,6 +13,7 @@ export default function Films({ text }) {
     grain: 'https://vimeo.com/683031798',
     asiad: 'https://vimeo.com/447316206',
     assignments: 'https://vimeo.com/322354723',
+    tainted: 'https://vimeo.com/143644757/dd3de1d7c0',
   };
 
   return (
@@ -51,6 +52,7 @@ export async function getStaticPaths() {
       { params: { filmsName: 'grain' } },
       { params: { filmsName: 'asiad' } },
       { params: { filmsName: 'assignments' } },
+      { params: { filmsName: 'tainted' } },
     ],
     fallback: false,
   };
