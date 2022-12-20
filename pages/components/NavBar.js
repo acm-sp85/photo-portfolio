@@ -28,7 +28,7 @@ export default function NavBar() {
             <Link href={'/gallery/street'}>STREET</Link>
             <Link href={'/gallery/style'}>STYLE</Link>
             <Link href={'/gallery/chicago'}>CHICAGO</Link>
-            <Link href={'/commercial'}>COMMERCIAL</Link>
+            <Link href={'/assignments'}>ASSIGNMENTS</Link>
           </div>
         ) : (
           <></>
@@ -44,8 +44,8 @@ export default function NavBar() {
           <div className={styles.nav__photography__items}>
             <Link href={'/films/grain'}>GRAIN</Link>
             <Link href={'/films/asiad'}>ASIAD</Link>
-            <Link href={'/films/assignments'}>ASSIGNMENTS</Link>
             <Link href={'/films/tainted'}>TAINTED</Link>
+            <Link href={'/films/assignments'}>ASSIGNMENTS</Link>
           </div>
         ) : (
           <></>

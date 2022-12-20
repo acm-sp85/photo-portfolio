@@ -81,3 +81,16 @@ $color-primary: #f3a200;
   z-index: -1;
   background-color: #000000;
 }
+
+.list {
+  display: grid;
+  > * {
+    font-size: 3rem;
+    color: rgb(90, 90, 90);
+  }
+}
+
+.assignmentName {
+  font-size: 2rem;
+  text-align: center;
+}
