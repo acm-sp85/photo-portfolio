@@ -3,20 +3,37 @@ import { useEffect, useState } from 'react';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 import ImageGallery from '../components/ImageGallery';
 import styles from '../../styles/Home.module.scss';
+import ReactPlayer from 'react-player';
 
 export default function Films({ text }) {
   let router = useRouter();
   let folder = router.query.filmsName;
+  let [videoMuted, setVideoMuted] = useState(true);
   const videoLinks = {
-    grain: 'https://www.youtube.com/watch?v=VraRuNJ6T5k',
+    grain: 'https://vimeo.com/683031798',
     asiad: 'https://vimeo.com/447316206',
     assignments: 'https://vimeo.com/322354723',
   };
 
   return (
     <div>
-      {folder && console.log(videoLinks[folder])}
-      <h1 className={styles.centered}>{folder} COMING SOON</h1>
+      {/* <h1 className={styles.centered}>{folder} COMING SOON</h1> */}
+      <ReactPlayer
+        url={videoLinks[folder]}
+        playing={true}
+        loop={true}
+        controls={true}
+        muted={videoMuted}
+        width="100%"
+        height="100%"
+        className={styles.video}
+      />
+      {/* <button
+        className={styles.centered}
+        onClick={() => setVideoMuted(!videoMuted)}
+      >
+        mute
+      </button> */}
     </div>
   );
 }
