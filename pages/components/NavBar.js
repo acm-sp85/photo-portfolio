@@ -24,10 +24,13 @@ export default function NavBar() {
         <Link href={'/'}>PHOTOGRAPHY</Link>
         {togglePhoto ? (
           <div className={styles.nav__photography__items}>
-            <Link href={'/gallery/portraits'}>PORTRAITS</Link>
-            <Link href={'/gallery/street'}>STREET</Link>
-            <Link href={'/gallery/style'}>STYLE</Link>
-            <Link href={'/gallery/chicago'}>CHICAGO</Link>
+            {/* <Link href={'/gallery/portraits'}>PORTRAITS</Link> */}
+            {/* <Link href={'/gallery/street'}>STREET</Link> */}
+            {/* <Link href={'/gallery/style'}>STYLE</Link> */}
+            {/* <Link href={'/gallery/chicago'}>CHICAGO</Link> */}
+
+            <Link href={'/assignments'}>OVERVIEW</Link>
+            <Link href={'/personal'}>PERSONAL</Link>
             <Link href={'/assignments'}>ASSIGNMENTS</Link>
           </div>
         ) : (
