@@ -7,11 +7,16 @@ import styles from '../../styles/Home.module.scss';
 export default function Films({ text }) {
   let router = useRouter();
   let folder = router.query.filmsName;
+  const videoLinks = {
+    grain: 'https://www.youtube.com/watch?v=VraRuNJ6T5k',
+    asiad: 'https://vimeo.com/447316206',
+    assignments: 'https://vimeo.com/322354723',
+  };
 
   return (
     <div>
-      {/* <h1>{router.query.filmsName}</h1> */}
-      <h1 className={styles.centered}>COMING SOON</h1>
+      {folder && console.log(videoLinks[folder])}
+      <h1 className={styles.centered}>{folder} COMING SOON</h1>
     </div>
   );
 }

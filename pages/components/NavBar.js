@@ -43,7 +43,7 @@ export default function NavBar() {
           <div className={styles.nav__photography__items}>
             <Link href={'/films/grain'}>GRAIN</Link>
             <Link href={'/films/asiad'}>ASIAD</Link>
-            <Link href={'/films/assigments'}>ASSIGNMENTS</Link>
+            <Link href={'/films/assignments'}>ASSIGNMENTS</Link>
           </div>
         ) : (
           <></>
