@@ -8,7 +8,7 @@ export default function about() {
       <Image
         width="300px"
         height="300px"
-        src="/../public/bio-pic.jpg"
+        src="https://res.cloudinary.com/acm-85/image/upload/v1671568786/about/bio-pic_jkixgd.jpg"
         alt="portrait"
       />
       <h2 style={{ marginLeft: '40px' }}>
