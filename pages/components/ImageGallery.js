@@ -56,6 +56,7 @@ export default function ImageGallery(props) {
                       src={image.image}
                       alt={startingPoint} //adding a counter to be know which image we clicked
                       onClick={(e) => {
+                        console.log(e.target.src);
                         setStartingPoint(e.target.alt);
 
                         gridSwitch();
@@ -79,23 +80,3 @@ export default function ImageGallery(props) {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

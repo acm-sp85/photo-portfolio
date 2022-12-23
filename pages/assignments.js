@@ -19,7 +19,7 @@ export default function assignments() {
         <Link href={'/assignments/dazzler'}>Dazzler Hotel</Link>
         <Link href={'/assignments/stone-island'}>StoneIsland</Link>
         <Link href={'/assignments/balmain'}>Balmain</Link>
-        <Link href={'/assignments/carolina-herrerea'}>Caroina Herrera</Link>
+        <Link href={'/assignments/carolina-herrerea'}>Carolina Herrera</Link>
         <Link href={'/assignments/luxottica'}>Luxottica</Link>
         <Link href={'/assignments/uag'}>Urban Atelier Group</Link>
         <Link href={'/assignments/gift-of-time'}>Gift Of Time</Link>
