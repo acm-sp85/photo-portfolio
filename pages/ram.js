@@ -5,25 +5,33 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function ram({ images }) {
-  // let counter = Math.floor(Math.random() * images.length);
   let [memories, setMemories] = useState(images);
-  let initialCounter = 0;
-  useEffect(() => {}, [memories]);
+  let [counter, setCounter] = useState(
+    Math.floor(Math.random() * (memories.length -1))
+  );
+  useEffect(() => {
+    if (memories.length == 0) {
+      setMemories(images);
+    }
+    console.log('length: ' + memories.length);
+  }, [memories]);
   return (
     <div className={styles.centered}>
       <h1 style={{ marginLeft: '40px' }}>Random Access Memories</h1>
-      {memories.length > 0 && (
+
+      {console.log(counter)}
+      {memories[counter] && (
         <Image
-          width={memories[initialCounter].width}
-          height={memories[initialCounter].height}
-          src={memories[initialCounter].image}
-          alt={initialCounter} //adding a counter to be know which image we clicked
+          src={memories[counter].image}
+          width={memories[counter].width}
+          height={memories[counter].height}
+          alt={counter}
           onClick={() => {
             let aux = [...memories];
-            aux.splice(initialCounter, 1);
-            console.log(memories);
-            initialCounter = Math.floor(Math.random() * memories.length);
+            aux.splice(counter, 1);
             setMemories(aux);
+            setCounter(Math.floor(Math.random() * (memories.length - 1)));
+            console.log('counter: ' + counter);
           }}
         />
       )}
