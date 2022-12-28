@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 export default function ram({ images }) {
   let [memories, setMemories] = useState(images);
   let [counter, setCounter] = useState(
-    Math.floor(Math.random() * (memories.length -1))
+    Math.floor(Math.random() * (memories.length - 1))
   );
   useEffect(() => {
     if (memories.length == 0) {
@@ -16,25 +16,25 @@ export default function ram({ images }) {
     console.log('length: ' + memories.length);
   }, [memories]);
   return (
-    <div className={styles.centered}>
+    <div>
       <h1 style={{ marginLeft: '40px' }}>Random Access Memories</h1>
-
-      {console.log(counter)}
-      {memories[counter] && (
-        <Image
-          src={memories[counter].image}
-          width={memories[counter].width}
-          height={memories[counter].height}
-          alt={counter}
-          onClick={() => {
-            let aux = [...memories];
-            aux.splice(counter, 1);
-            setMemories(aux);
-            setCounter(Math.floor(Math.random() * (memories.length - 1)));
-            console.log('counter: ' + counter);
-          }}
-        />
-      )}
+      <div className={styles.centered}>
+        {console.log(counter)}
+        {memories[counter] && (
+          <Image
+            src={memories[counter].image}
+            width={memories[counter].width}
+            height={memories[counter].height}
+            alt={counter}
+            onClick={() => {
+              let aux = [...memories];
+              aux.splice(counter, 1);
+              setMemories(aux);
+              setCounter(Math.floor(Math.random() * (memories.length - 1)));
+            }}
+          />
+        )}
+      </div>
     </div>
   );
 }
@@ -43,6 +43,7 @@ export default function ram({ images }) {
 export async function getStaticProps(context) {
   const results = await search({
     expression: `folder="photo-portfolio/random-access-memories"`,
+    max_results: 500,
   });
 
   const { resources, next_cursor: nextCursor } = results;

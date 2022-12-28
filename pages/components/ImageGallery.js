@@ -54,6 +54,7 @@ export default function ImageGallery(props) {
                       width={image.width}
                       height={image.height}
                       src={image.image}
+                      loading="lazy"
                       alt={startingPoint} //adding a counter to be know which image we clicked
                       onClick={(e) => {
                         console.log(e.target.src);
