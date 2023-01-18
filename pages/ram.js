@@ -4,7 +4,7 @@ import { search, mapImageResources, getFolders } from '../lib/cloudinary';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-export default function ram({ images }) {
+export default function Ram({ images }) {
   let [memories, setMemories] = useState(images);
   let [counter, setCounter] = useState(
     Math.floor(Math.random() * (memories.length - 1))
@@ -33,7 +33,10 @@ export default function ram({ images }) {
           />
         )}
       </div>
-      <p1 className={styles.ram__text}>Random Access Memories: a collection of personal photographs with no order. The way our brains work - click to randomize -</p1>
+      <p1 className={styles.ram__text}>
+        Random Access Memories: a collection of personal photographs with no
+        order. The way our brains work - click to randomize -
+      </p1>
     </div>
   );
 }
