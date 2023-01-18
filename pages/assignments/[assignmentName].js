@@ -10,9 +10,9 @@ export default function Assignments({ images, nextCursor, folders }) {
   let folder = router.query.assignmentName;
 
   return (
-    <div>
-      <h1 className={styles.assignmentName}>{folder}</h1>
-      <ImageGallery images={images} />
+    <div className={styles.assignment__block}>
+      <ImageGallery images={images} folder={folder} />
+      {/* <p className={styles.assignmentName}>{folder}</p> */}
     </div>
   );
 }

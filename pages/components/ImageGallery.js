@@ -8,11 +8,12 @@ import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
+import Masonry from '@mui/lab/Masonry';
 import ImageListItem from '@mui/material/ImageListItem';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
-  const [showGrid, setShowGrid] = useState(true);
+  const [showGrid, setShowGrid] = useState(false);
   let [startingPoint, setStartingPoint] = useState(1);
 
   useEffect(() => {
@@ -39,9 +40,9 @@ export default function ImageGallery(props) {
 
       {showGrid && (
         <Box sx={{ width: '100vw', overflowY: 'scroll' }}>
-          <ImageList
-            variant="masonry"
-            cols={3}
+          <Masonry
+            // variant="masonry"
+            defaultColumns={3}
             gap={8}
             className={styles.masons}
           >
@@ -54,7 +55,7 @@ export default function ImageGallery(props) {
                       width={image.width}
                       height={image.height}
                       src={image.image}
-                      loading="lazy"
+                      // loading="lazy"
                       alt={startingPoint} //adding a counter to be know which image we clicked
                       onClick={(e) => {
                         console.log(e.target.src);
@@ -66,16 +67,19 @@ export default function ImageGallery(props) {
                   </ImageListItem>
                 );
               })}
-          </ImageList>
+          </Masonry>
         </Box>
       )}
       {!showGrid && (
-        <Carousel
-          photos={photos}
-          gridSwitch={gridSwitch}
-          startingPoint={startingPoint}
-          setStartingPoint={setStartingPoint}
-        />
+        <div>
+          <Carousel
+            photos={photos}
+            gridSwitch={gridSwitch}
+            startingPoint={startingPoint}
+            setStartingPoint={setStartingPoint}
+          />
+          <p className={styles.assignmentName}>{props.folder}</p>
+        </div>
       )}
     </div>
   );

@@ -16,10 +16,8 @@ export default function ram({ images }) {
     console.log('length: ' + memories.length);
   }, [memories]);
   return (
-    <div>
-      <h1 style={{ marginLeft: '40px' }}>Random Access Memories</h1>
-      <div className={styles.centered}>
-        {console.log(counter)}
+    <div className={styles.ram__block}>
+      <div className={styles.ram__images}>
         {memories[counter] && (
           <Image
             src={memories[counter].image}
@@ -35,6 +33,7 @@ export default function ram({ images }) {
           />
         )}
       </div>
+      <p1 className={styles.ram__text}>Random Access Memories: a collection of personal photographs with no order. The way our brains work - click to randomize -</p1>
     </div>
   );
 }

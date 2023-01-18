@@ -52,12 +52,10 @@ export default function Carousel({
       </KeyboardArrowLeftIcon>
 
       {images && counter >= 0 && (
-        <div className={styles.photo__display}>
+        <div className={styles.photo__display} style={{}}>
           <Image
             width={images[counter].width}
             height={images[counter].height}
-            // layout="fill"
-            // object-position={'50% 50%'}
             src={images[counter].image}
             alt={images[counter].id}
             onClick={(e) => {
