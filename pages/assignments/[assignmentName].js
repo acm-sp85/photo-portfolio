@@ -62,7 +62,7 @@ export async function getStaticPaths() {
       { params: { assignmentName: 'hergueta' } },
       { params: { assignmentName: 'lonely-clay' } },
       { params: { assignmentName: 'coma-store' } },
-      { params: { assignmentName: 'herny-julier' } },
+      { params: { assignmentName: 'henry-julier' } },
       { params: { assignmentName: 'arizona' } },
       { params: { assignmentName: 'olea' } },
       { params: { assignmentName: 'perrier' } },
