@@ -13,13 +13,11 @@ export default function Assignments() {
           backgroundColor: 'blue',
           width: '100%',
           height: '100%',
-          background: '#000',
+          background: 'white',
           // opacity: '0.5',
           position: 'fixed',
-          backgroundImage:
-            'url(' +
-            'https://res.cloudinary.com/acm-85/image/upload/v1674214973/photo-portfolio/commercial/hero-images/chicago-6_zbp35f.jpg' +
-            ')',
+          backgroundImage: `url(
+            ${backgroundImage} )`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -32,17 +30,38 @@ export default function Assignments() {
             href={'/assignments/chase-bank'}
             onMouseEnter={() =>
               setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674214973/photo-portfolio/commercial/hero-images/chicago-6_zbp35f.jpg'
+                'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg'
               )
             }
+            onMouseLeave={() => setBackgroundImage(null)}
           >
             Chase Bank
           </Link>
           <Link href={'/assignments/vogue'}>Vogue</Link>
           <Link href={'/assignments/telva'}>Telva</Link>
-          <Link href={'/assignments/off-white'}>OffWhite</Link>
+          <Link
+            href={'/assignments/off-white'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674217683/photo-portfolio/commercial/hero-images/SP18_D3_119-Edit_ex5ppy.jpg'
+              )
+            }
+            onMouseLeave={() => setBackgroundImage(null)}
+          >
+            OffWhite
+          </Link>
           <Link href={'/assignments/sylvain'}>SYLVAIN</Link>
-          <Link href={'/assignments/pace'}>Pace</Link>
+          <Link
+            href={'/assignments/pace'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674217789/photo-portfolio/commercial/hero-images/_H2A7126_jwf83a.jpg'
+              )
+            }
+            onMouseLeave={() => setBackgroundImage(null)}
+          >
+            Pace
+          </Link>
           <Link href={'/assignments/demelier'}>DeMelier</Link>
           <Link href={'/assignments/ismine'}>IsMine</Link>
           <Link href={'/assignments/kionita'}>Kionita</Link>
