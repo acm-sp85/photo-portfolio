@@ -6,7 +6,12 @@ export default function assignments() {
   return (
     <div className={styles.centered}>
       <ul className={styles.list}>
-        <Link href={'/assignments/chase-bank'}>Chase Bank</Link>
+        <Link
+          href={'/assignments/chase-bank'}
+          onMouseEnter={() => console.log('tito')}
+        >
+          Chase Bank
+        </Link>
         <Link href={'/assignments/vogue'}>Vogue</Link>
         <Link href={'/assignments/telva'}>Telva</Link>
         <Link href={'/assignments/off-white'}>OffWhite</Link>

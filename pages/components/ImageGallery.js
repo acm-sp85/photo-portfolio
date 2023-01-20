@@ -8,12 +8,12 @@ import ViewModuleIcon from '@mui/icons-material/ViewModule';
 import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
-import Masonry from '@mui/lab/Masonry';
+// import Masonry from '@mui/lab/Masonry';
 import ImageListItem from '@mui/material/ImageListItem';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
-  const [showGrid, setShowGrid] = useState(false);
+  const [showGrid, setShowGrid] = useState(true);
   let [startingPoint, setStartingPoint] = useState(1);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function ImageGallery(props) {
   };
 
   return (
-    <div>
+    <div className={styles.image_gallery}>
       {/* {showGrid ? (
         <ZoomOutMapIcon onClick={gridSwitch} className={styles.icons} />
       ) : (
@@ -39,11 +39,18 @@ export default function ImageGallery(props) {
       )}{' '} */}
 
       {showGrid && (
-        <Box sx={{ width: '100vw', overflowY: 'scroll' }}>
-          <Masonry
-            // variant="masonry"
-            defaultColumns={3}
-            gap={8}
+        <Box
+          sx={{
+            width: '100vw',
+            overflowY: 'hidden',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+          }}
+        >
+          <ImageList
+            variant="masonry"
+            cols={2}
+            gap={20}
             className={styles.masons}
           >
             {photos &&
@@ -54,7 +61,9 @@ export default function ImageGallery(props) {
                     <Image
                       width={image.width}
                       height={image.height}
-                      src={image.image}
+                      // src={image.image}
+                      src={`${image.image}?w=248&fit=crop&auto=format`}
+                      srcSet={`${image.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
                       // loading="lazy"
                       alt={startingPoint} //adding a counter to be know which image we clicked
                       onClick={(e) => {
@@ -67,7 +76,7 @@ export default function ImageGallery(props) {
                   </ImageListItem>
                 );
               })}
-          </Masonry>
+          </ImageList>
         </Box>
       )}
       {!showGrid && (
