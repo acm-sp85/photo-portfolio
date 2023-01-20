@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
-import { height } from '@mui/system';
 
 export default function Assignments() {
   let [backgroundImage, setBackgroundImage] = useState(null);
@@ -38,7 +37,18 @@ export default function Assignments() {
             Chase Bank
           </Link>
           <Link href={'/assignments/vogue'}>Vogue</Link>
-          <Link href={'/assignments/telva'}>Telva</Link>
+
+          <Link
+            href={'/assignments/telva'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674247576/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-1_vedqv7.jpg'
+              )
+            }
+            onMouseLeave={() => setBackgroundImage(null)}
+          >
+            Telva
+          </Link>
           <Link
             href={'/assignments/off-white'}
             onMouseEnter={() =>
