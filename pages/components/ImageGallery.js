@@ -39,29 +39,45 @@ export default function ImageGallery(props) {
       )}{' '} */}
 
       {showGrid && (
-        <>
-          {photos &&
-            photos.map((image) => {
-              startingPoint++;
-              return (
-                // eslint-disable-next-line react/jsx-key
-                <div>
-                  {/* <Image
-                    src={image.image}
-                    fill
-                    alt={startingPoint} //adding a counter to be know which image we clicked
-                    onClick={(e) => {
-                      console.log(e.target.src);
-                      setStartingPoint(e.target.alt);
+        <Box
+          sx={{
+            width: '100vw',
+            overflowY: 'hidden',
+            paddingLeft: '20px',
+            paddingRight: '20px',
+          }}
+        >
+          <ImageList
+            variant="masonry"
+            cols={2}
+            gap={20}
+            className={styles.masons}
+          >
+            {photos &&
+              photos.map((image) => {
+                startingPoint++;
+                return (
+                  <ImageListItem key={image.img}>
+                    <Image
+                      width={image.width}
+                      height={image.height}
+                      // src={image.image}
+                      src={`${image.image}?w=248&fit=crop&auto=format`}
+                      srcSet={`${image.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                      // loading="lazy"
+                      alt={startingPoint} //adding a counter to be know which image we clicked
+                      onClick={(e) => {
+                        console.log(e.target.src);
+                        setStartingPoint(e.target.alt);
 
-                      gridSwitch();
-                    }}
-                  /> */}
-                  <p>f</p>
-                </div>
-              );
-            })}
-        </>
+                        gridSwitch();
+                      }}
+                    />
+                  </ImageListItem>
+                );
+              })}
+          </ImageList>
+        </Box>
       )}
       {!showGrid && (
         <div>
