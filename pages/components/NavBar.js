@@ -13,12 +13,7 @@ export default function NavBar() {
       </div>
       <div
         className={styles.nav__photography}
-        onMouseEnter={() =>
-          // (document.body.style = 'background: rgb(184, 87, 87)')
-
-          // console.log(document.getElementsByClassName('container'))
-          setTogglePhoto(!togglePhoto)
-        }
+        onMouseEnter={() => setTogglePhoto(!togglePhoto)}
         onMouseLeave={() => setTogglePhoto(false)}
       >
         <Link href={'/'}>PHOTOGRAPHY</Link>
