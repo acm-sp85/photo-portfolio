@@ -13,7 +13,6 @@ $color-primary: #f3a200;
   display: flex;
 }
 
-
 .container {
   background-image: url('./../public/temp-01.gif');
   height: 80vh;
@@ -85,6 +84,7 @@ $color-primary: #f3a200;
 
 .list {
   display: grid;
+
   > * {
     font-size: 3rem;
     color: rgb(201, 201, 201);
@@ -162,4 +162,8 @@ $color-primary: #f3a200;
   font-size: 1.4rem;
   text-align: left;
   margin-right: 200px;
+}
+
+.with__transition {
+  transition: all 0.3s ease;
 }

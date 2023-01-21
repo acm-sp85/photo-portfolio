@@ -4,10 +4,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Assignments() {
-  let [backgroundImage, setBackgroundImage] = useState(null);
+  const whiteBackground =
+    'https://res.cloudinary.com/acm-85/image/upload/v1674301787/photo-portfolio/commercial/hero-images/Screen_Shot_2023-01-21_at_6.49.35_AM_yynapx.png';
+  let [backgroundImage, setBackgroundImage] = useState(whiteBackground);
   return (
     <>
       <div
+        className={styles.with__transition}
         style={{
           backgroundColor: 'blue',
           width: '100%',
@@ -32,7 +35,7 @@ export default function Assignments() {
                 'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg'
               )
             }
-            onMouseLeave={() => setBackgroundImage(null)}
+            onMouseLeave={() => setBackgroundImage(whiteBackground)}
           >
             Chase Bank
           </Link>
@@ -45,7 +48,7 @@ export default function Assignments() {
                 'https://res.cloudinary.com/acm-85/image/upload/v1674247576/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-1_vedqv7.jpg'
               )
             }
-            onMouseLeave={() => setBackgroundImage(null)}
+            onMouseLeave={() => setBackgroundImage(whiteBackground)}
           >
             Telva
           </Link>
@@ -56,7 +59,7 @@ export default function Assignments() {
                 'https://res.cloudinary.com/acm-85/image/upload/v1674217683/photo-portfolio/commercial/hero-images/SP18_D3_119-Edit_ex5ppy.jpg'
               )
             }
-            onMouseLeave={() => setBackgroundImage(null)}
+            onMouseLeave={() => setBackgroundImage(whiteBackground)}
           >
             OffWhite
           </Link>
@@ -68,7 +71,7 @@ export default function Assignments() {
                 'https://res.cloudinary.com/acm-85/image/upload/v1674217789/photo-portfolio/commercial/hero-images/_H2A7126_jwf83a.jpg'
               )
             }
-            onMouseLeave={() => setBackgroundImage(null)}
+            onMouseLeave={() => setBackgroundImage(whiteBackground)}
           >
             Pace
           </Link>
