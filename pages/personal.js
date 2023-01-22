@@ -29,7 +29,7 @@ export default function Personal() {
       <div className={styles.centered}>
         <ul className={styles.list}>
           <Link
-            href={'/assignments/chase-bank'}
+            href={'gallery/street-studies'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg'
@@ -41,7 +41,7 @@ export default function Personal() {
           </Link>
 
           <Link
-            href={'/ram'}
+            href={'gallery/ram'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg'
@@ -53,7 +53,7 @@ export default function Personal() {
           </Link>
 
           <Link
-            href={'/assignments/pace'}
+            href={'gallery/old-old-ny'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg'
@@ -65,7 +65,7 @@ export default function Personal() {
           </Link>
           <Link
             className={styles.with__transition}
-            href={'/assignments/pace'}
+            href={'gallery/travel-log'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg'
@@ -76,7 +76,7 @@ export default function Personal() {
             Travel Log
           </Link>
           <Link
-            href={'/ram'}
+            href={'gallery/dontttwice'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674300863/photo-portfolio/commercial/hero-images/Screen_Shot_2023-01-21_at_6.32.48_AM_rq3oxl.png'

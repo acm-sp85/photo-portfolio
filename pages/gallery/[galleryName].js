@@ -12,7 +12,7 @@ export default function Gallery({ images, nextCursor, folders }) {
   return (
     <div>
       <h1 className={styles.sectionTitle}>{router.query.galleryName}</h1>
-      <ImageGallery images={images} />
+      <ImageGallery images={images} showGrid={false} />
     </div>
   );
 }
@@ -21,7 +21,7 @@ export default function Gallery({ images, nextCursor, folders }) {
 export async function getStaticProps(context) {
   const galleryName = context.params.galleryName;
   const results = await search({
-    expression: `folder="photo-portfolio/${galleryName}"`,
+    expression: `folder="photo-portfolio/personal/${galleryName}"`,
   });
 
   const { resources, next_cursor: nextCursor } = results;
@@ -38,10 +38,9 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { galleryName: 'portraits' } },
-      { params: { galleryName: 'street' } },
-      { params: { galleryName: 'style' } },
-      { params: { galleryName: 'chicago' } },
+      { params: { galleryName: 'street-studies' } },
+      { params: { galleryName: 'old-old-ny' } },
+      { params: { galleryName: 'dontttwice' } },
     ],
     fallback: false,
   };

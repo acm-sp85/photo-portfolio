@@ -11,7 +11,7 @@ export default function Assignments({ images, nextCursor, folders }) {
 
   return (
     <div className={styles.assignment__block}>
-      <ImageGallery images={images} folder={folder} />
+      <ImageGallery images={images} folder={folder} showGrid={true} />
       {/* <p className={styles.assignmentName}>{folder}</p> */}
     </div>
   );

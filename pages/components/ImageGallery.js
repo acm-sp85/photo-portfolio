@@ -4,16 +4,13 @@ import styles from './../../styles/Home.module.scss';
 
 import Image from 'next/image';
 import Carousel from './Carousel';
-import ViewModuleIcon from '@mui/icons-material/ViewModule';
-import ZoomOutMapIcon from '@mui/icons-material/ZoomOutMap';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
-// import Masonry from '@mui/lab/Masonry';
 import ImageListItem from '@mui/material/ImageListItem';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
-  const [showGrid, setShowGrid] = useState(true);
+  const [showGrid, setShowGrid] = useState(props.showGrid);
   let [startingPoint, setStartingPoint] = useState(1);
 
   useEffect(() => {
