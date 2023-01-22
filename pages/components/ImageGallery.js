@@ -39,39 +39,28 @@ export default function ImageGallery(props) {
       )}{' '} */}
 
       {showGrid && (
-        <Box
-          sx={{
-            width: '100vw',
-            overflowY: 'hidden',
-            paddingLeft: '20px',
-            paddingRight: '20px',
-          }}
-        >
+        <Box sx={{ width: '100vw', height: '100vh', overflowY: 'scroll' }}>
           <ImageList
             variant="masonry"
-            cols={2}
+            cols={3}
             gap={20}
-            className={styles.masons}
+            style={{ padding: '20px' }}
           >
             {photos &&
               photos.map((image) => {
                 startingPoint++;
                 return (
-                  <ImageListItem key={image.img}>
+                  <ImageListItem key={image.img} style={{ overflow: 'hidden' }}>
                     <Image
-                      width={image.width}
-                      height={image.height}
-                      // src={image.image}
-                      src={`${image.image}?w=248&fit=crop&auto=format`}
-                      srcSet={`${image.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                      // loading="lazy"
-                      alt={startingPoint} //adding a counter to be know which image we clicked
-                      onClick={(e) => {
-                        console.log(e.target.src);
-                        setStartingPoint(e.target.alt);
-
-                        gridSwitch();
+                      width="500"
+                      height="500"
+                      style={{
+                        height: 'auto',
+                        width: 'auto',
                       }}
+                      src={image.image}
+                      alt={image.title}
+                      // loading="lazy"
                     />
                   </ImageListItem>
                 );
