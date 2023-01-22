@@ -59,8 +59,15 @@ export default function ImageGallery(props) {
                         width: 'auto',
                       }}
                       src={image.image}
-                      alt={image.title}
                       // loading="lazy"
+                      // alt={image.title}
+                      alt={startingPoint} //adding a counter to be know which image we clicked
+                      onClick={(e) => {
+                        console.log(e.target.src);
+                        setStartingPoint(e.target.alt);
+
+                        gridSwitch();
+                      }}
                     />
                   </ImageListItem>
                 );

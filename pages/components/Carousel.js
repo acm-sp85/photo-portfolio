@@ -52,10 +52,14 @@ export default function Carousel({
       </KeyboardArrowLeftIcon>
 
       {images && counter >= 0 && (
-        <div className={styles.photo__display} style={{}}>
+        <div className={`${styles.photo__display} ${styles.centered}`}>
           <Image
-            width={images[counter].width}
-            height={images[counter].height}
+            width="500"
+            height="500"
+            style={{
+              height: '90vh',
+              width: 'auto',
+            }}
             src={images[counter].image}
             alt={images[counter].id}
             onClick={(e) => {
