@@ -65,7 +65,7 @@ export default function Personal() {
           </Link>
           <Link
             className={styles.with__transition}
-            href={'gallery/travel-log'}
+            href={'/travel'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg'

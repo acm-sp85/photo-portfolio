@@ -20,6 +20,9 @@ export default function Carousel({
         goRight();
       } else if (e.code === 'ArrowLeft') {
         goLeft();
+      } else if (e.code === 'Escape') {
+        setStartingPoint(0);
+        gridSwitch();
       }
     };
     document.addEventListener('keydown', keyDownHandler);

@@ -16,10 +16,10 @@ export default function ImageGallery(props) {
   useEffect(() => {
     setPhotos(props.images);
     setStartingPoint(0);
+    if (props.grid) {
+      setShowGrid(props.grid);
+    }
   }, [props]);
-  // useEffect(() => {
-  //   setShowGrid(false);
-  // }, [photos]);
 
   useEffect(() => {}, [startingPoint]);
 
@@ -29,18 +29,12 @@ export default function ImageGallery(props) {
 
   return (
     <div className={styles.image_gallery}>
-      {/* {showGrid ? (
-        <ZoomOutMapIcon onClick={gridSwitch} className={styles.icons} />
-      ) : (
-        <ViewModuleIcon onClick={gridSwitch} className={styles.icons} />
-      )}{' '} */}
-
       {showGrid && (
         <Box sx={{ width: '100vw', height: '100vh', overflowY: 'scroll' }}>
           <ImageList
             variant="masonry"
             cols={3}
-            gap={20}
+            gap={27}
             style={{ padding: '20px' }}
           >
             {photos &&
@@ -56,11 +50,8 @@ export default function ImageGallery(props) {
                         width: 'auto',
                       }}
                       src={image.image}
-                      // loading="lazy"
-                      // alt={image.title}
                       alt={startingPoint} //adding a counter to be know which image we clicked
                       onClick={(e) => {
-                        console.log(e.target.src);
                         setStartingPoint(e.target.alt);
 
                         gridSwitch();
