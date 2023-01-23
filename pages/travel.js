@@ -28,7 +28,7 @@ export default function Travel() {
       <div className={styles.centered}>
         <ul className={styles.list}>
           <Link
-            href={'gallery/rome'}
+            href={'gallery/italy'}
             // onMouseEnter={() =>
             //   setBackgroundImage(
             //     'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg'

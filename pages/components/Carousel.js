@@ -36,12 +36,16 @@ export default function Carousel({
   const goLeft = () => {
     if (counter !== 0) {
       setCounter(counter - 1);
+    } else if (counter === 0) {
+      setCounter(images.length - 1);
     }
   };
 
   const goRight = () => {
     if (counter < photos.length - 1) {
       setCounter(counter + 1);
+    } else if (counter === images.length - 1) {
+      setCounter(0);
     }
   };
   return (
@@ -60,7 +64,7 @@ export default function Carousel({
             width="500"
             height="500"
             style={{
-              height: '90vh',
+              height: '80vh',
               width: 'auto',
             }}
             src={images[counter].image}

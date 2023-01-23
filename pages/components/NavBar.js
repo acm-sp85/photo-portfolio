@@ -19,7 +19,7 @@ export default function NavBar() {
         <Link href={'/'}>PHOTOGRAPHY</Link>
         {togglePhoto ? (
           <div className={styles.nav__photography__items}>
-            <Link href={'/overview'}>OVERVIEW</Link>
+            {/* <Link href={'/overview'}>OVERVIEW</Link> */}
             <Link href={'/personal'}>PERSONAL</Link>
             <Link href={'/assignments'}>ASSIGNMENTS</Link>
           </div>
