@@ -14,7 +14,8 @@ $color-primary: #f3a200;
 }
 
 .container {
-  background-image: url('./../public/temp-01.gif');
+  // background-image: url('./../public/temp-01.gif');
+  background-color: black;
   height: 80vh;
   transform: translateY(-50px);
   z-index: -100;

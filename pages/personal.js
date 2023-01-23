@@ -18,15 +18,18 @@ export default function Personal() {
           background: 'white',
           // opacity: '0.5',
           position: 'fixed',
+          backgroundPosition: 'center',
           backgroundImage: `url(
             ${backgroundImage} )`,
-          backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           zIndex: '-100',
         }}
       ></div>
-      <div className={styles.centered}>
+      <div
+        className={styles.centered}
+        style={{ height: '100vh', zIndex: '100' }}
+      >
         <ul className={styles.list}>
           <Link
             href={'gallery/street-studies'}

@@ -1,19 +1,60 @@
 import { useState, useEffect } from 'react';
-import { search, getFolders } from '../lib/cloudinary';
+import { search, getFolders, mapImageResources } from '../lib/cloudinary';
 import styles from '../styles/Home.module.scss';
 
-export default function Home({ folders }) {
-  return <div className={styles.container}></div>;
+export default function Home({ images }) {
+  let background =
+    'https://res.cloudinary.com/acm-85/image/upload/v1674301559/photo-portfolio/commercial/hero-images/Screen_Shot_2023-01-21_at_6.45.46_AM_rkdw6d.png';
+  let [backgroundImage, setBackgroundImage] = useState(background);
+  let [backgroundPool, setBackgroundPool] = useState([...images]);
+  let counter = 0;
+
+  useEffect(() => {
+    const interval = setInterval(() => updateBackground(), 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const updateBackground = () => {
+    if (counter >= backgroundPool.length) counter = 0;
+    setBackgroundImage(backgroundPool[counter].image);
+    counter++;
+  };
+
+  return (
+    <div className={styles.container}>
+      <div
+        className={styles.with__transition}
+        style={{
+          backgroundColor: 'blue',
+          width: '100%',
+          height: '100%',
+          background: 'white',
+          // opacity: '0.5',
+          position: 'fixed',
+          backgroundImage: `url(
+            ${backgroundImage} )`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          zIndex: '-100',
+        }}
+      ></div>
+      ;
+    </div>
+  );
 }
 
-export async function getStaticProps() {
+// via getStaticProps we are making our API call
+export async function getStaticProps(context) {
   const results = await search({
-    expression: 'folder=""',
+    expression: `folder="photo-portfolio/landing"`,
   });
 
-  const { folders } = await getFolders('');
-  console.log(folders);
+  const { resources, next_cursor: nextCursor } = results;
+  const images = mapImageResources(resources);
+
   return {
-    props: { folders },
+    props: { images },
   };
 }
