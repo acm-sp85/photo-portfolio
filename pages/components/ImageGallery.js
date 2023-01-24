@@ -8,6 +8,7 @@ import Carousel from './Carousel';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
@@ -31,6 +32,47 @@ export default function ImageGallery(props) {
   return (
     <div className={styles.image_gallery}>
       {showGrid && (
+        <div style={{ padding: '30px' }}>
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+          >
+            <Masonry gutter="30px">
+              {photos &&
+                photos.map((image) => {
+                  startingPoint++;
+                  return (
+                    <
+                      // style={{
+                      //   width: '100vw',
+                      //   height: '100vh',
+                      //   overflowY: 'scroll',
+                      // }}
+                    >
+                      <Image
+                        width="500"
+                        height="500"
+                        loading="lazy"
+                        // sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
+                        style={{
+                          height: 'auto',
+                          width: 'auto',
+                        }}
+                        src={image.image}
+                        alt={startingPoint} //adding a counter to be know which image we clicked
+                        onClick={(e) => {
+                          setStartingPoint(e.target.alt);
+
+                          gridSwitch();
+                        }}
+                      />
+                    </>
+                  );
+                })}
+            </Masonry>
+          </ResponsiveMasonry>
+        </div>
+      )}
+      {/* {showGrid && (
         <Box sx={{ width: '100vw', height: '100vh', overflowY: 'scroll' }}>
           <ImageList
             variant="masonry"
@@ -65,7 +107,7 @@ export default function ImageGallery(props) {
               })}
           </ImageList>
         </Box>
-      )}
+      )} */}
       {!showGrid && (
         <div>
           <Carousel

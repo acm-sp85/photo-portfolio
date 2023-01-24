@@ -22,7 +22,7 @@
     "react-dom": "^18.2.0",
     "react-player": "^2.11.0",
     "react-responsive-carousel": "^3.2.23",
-    "react-responsive-masonry": "^2.1.6",
+    "react-responsive-masonry": "^2.1.7",
     "sass": "^1.54.9",
     "slick-carousel": "^1.8.1",
     "uuidv4": "^6.2.13"
