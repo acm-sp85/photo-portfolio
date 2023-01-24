@@ -61,7 +61,7 @@ export default function Carousel({
 
       {images && counter >= 0 && (
         <div className={`${styles.photo__display} ${styles.centered}`}>
-          <CldImage
+          <Image
             width="1500"
             height="1500"
             loading="lazy"
