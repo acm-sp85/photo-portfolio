@@ -65,7 +65,7 @@ export default function Carousel({
             width="1500"
             height="1500"
             loading="lazy"
-            // objectFit="contain"
+            objectFit="contain"
             sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
             style={{
               height: '80vh',
