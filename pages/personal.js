@@ -44,7 +44,7 @@ export default function Personal() {
           </Link>
 
           <Link
-            href={'gallery/ram'}
+            href={'ram'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg'
