@@ -142,7 +142,7 @@ export default function Assignments() {
             Dazzler Hotel
           </Link>
           <Link
-            href={'/assignments/StoneIsland'}
+            href={'/assignments/stone-island'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1671752257/photo-portfolio/commercial/stone-island/Stone_Island0004_ney899.jpg'

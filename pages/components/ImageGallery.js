@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from './../../styles/Home.module.scss';
 
 import Image from 'next/image';
+import { CldImage } from 'next-cloudinary';
 import Carousel from './Carousel';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
@@ -45,6 +46,8 @@ export default function ImageGallery(props) {
                     <Image
                       width="500"
                       height="500"
+                      loading="lazy"
+                      // sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
                       style={{
                         height: 'auto',
                         width: 'auto',
