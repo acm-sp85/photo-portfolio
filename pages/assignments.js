@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Assignments() {
   const whiteBackground =
-    'https://res.cloudinary.com/acm-85/image/upload/v1674301787/photo-portfolio/commercial/hero-images/Screen_Shot_2023-01-21_at_6.49.35_AM_yynapx.png';
+    'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg';
   let [backgroundImage, setBackgroundImage] = useState(whiteBackground);
   return (
     <>
@@ -16,7 +16,7 @@ export default function Assignments() {
           width: '100%',
           height: '100%',
           background: 'white',
-          // opacity: '0.5',
+          opacity: '0.6',
           position: 'fixed',
           backgroundImage: `url(
             ${backgroundImage} )`,
@@ -25,7 +25,18 @@ export default function Assignments() {
           backgroundRepeat: 'no-repeat',
           zIndex: '-100',
         }}
-      ></div>
+      />
+      <div
+        className={styles.with__transition}
+        style={{
+          backgroundColor: 'black',
+          width: '100%',
+          height: '100%',
+          background: 'black',
+          position: 'fixed',
+          zIndex: '-200',
+        }}
+      />
       <div className={styles.centered}>
         <ul className={styles.list}>
           <Link
@@ -92,34 +103,44 @@ export default function Assignments() {
             Pace
           </Link>
           <Link
-            href={'/assignments/demelier'}
+            href={'/assignments/nuvolari'}
             onMouseEnter={() =>
               setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674481617/photo-portfolio/commercial/hero-images/_H2A2171_jxs7pr.jpg'
+                'https://res.cloudinary.com/acm-85/image/upload/v1675277903/photo-portfolio/commercial/hero-images/nuvolari-6_kztbry.jpg'
               )
             }
           >
-            DeMelier
+            Nuvolari - Fuori Corso
           </Link>
           <Link
-            href={'/assignments/ismine'}
+            href={'/assignments/usb'}
             onMouseEnter={() =>
               setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674481927/photo-portfolio/commercial/hero-images/ismine-hero-1_ewhqd5.jpg'
+                'https://res.cloudinary.com/acm-85/image/upload/v1675374678/photo-portfolio/commercial/hero-images/USB-_Dance_etc-4_sho8xi.jpg'
               )
             }
           >
-            Ismine
+            Union Savings Bank
           </Link>
           <Link
-            href={'/assignments/kionita'}
+            href={'/assignments/airama'}
             onMouseEnter={() =>
               setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674482226/photo-portfolio/commercial/hero-images/kionita-1_s4jvvx.jpg'
+                'https://res.cloudinary.com/acm-85/image/upload/v1675375053/photo-portfolio/commercial/hero-images/Airama-1_kldudw.jpg'
               )
             }
           >
-            Kionita
+            Airama
+          </Link>
+          <Link
+            href={'/assignments/sunday-times'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1675375192/photo-portfolio/commercial/hero-images/sunday-times-7_xc0mqz.jpg'
+              )
+            }
+          >
+            The Sunday Times
           </Link>
           <Link
             href={'/assignments/wok-bao'}
@@ -249,12 +270,40 @@ export default function Assignments() {
             Perrier
           </Link>
 
-          <Link href={'/assignments/sunday-times'}>The Sunday Times</Link>
-          <Link href={'/assignments/usb'}>Union Savings Bank</Link>
-          <Link href={'/assignments/beto'}>Beto Garcia</Link>
-          <Link href={'/assignments/airama'}>Airama</Link>
-          <Link href={'/assignments/nuvolari'}>Nuvolari - Fuori Corso</Link>
-          <Link href={'/assignments/bullish'}>Bullish</Link>
+          <Link
+            href={'/assignments/demelier'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674481617/photo-portfolio/commercial/hero-images/_H2A2171_jxs7pr.jpg'
+              )
+            }
+          >
+            DeMelier
+          </Link>
+          <Link
+            href={'/assignments/ismine'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674481927/photo-portfolio/commercial/hero-images/ismine-hero-1_ewhqd5.jpg'
+              )
+            }
+          >
+            Ismine
+          </Link>
+          <Link
+            href={'/assignments/kionita'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674482226/photo-portfolio/commercial/hero-images/kionita-1_s4jvvx.jpg'
+              )
+            }
+          >
+            Kionita
+          </Link>
+
+          {/* <Link href={'/assignments/beto'}>Beto Garcia</Link> */}
+
+          {/* <Link href={'/assignments/bullish'}>Bullish</Link> */}
           {/* <Link href={'/assignments/shipibo'}>
             Shipibo Connibo - Sara Flores
           </Link> */}

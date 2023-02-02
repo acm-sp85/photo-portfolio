@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Personal() {
   const blackBackground =
-    'https://res.cloudinary.com/acm-85/image/upload/v1674301559/photo-portfolio/commercial/hero-images/Screen_Shot_2023-01-21_at_6.45.46_AM_rkdw6d.png';
+    'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg';
   let [backgroundImage, setBackgroundImage] = useState(blackBackground);
   return (
     <>
@@ -16,7 +16,7 @@ export default function Personal() {
           width: '100%',
           height: '100%',
           background: 'white',
-          // opacity: '0.5',
+          opacity: '0.6',
           position: 'fixed',
           backgroundPosition: 'center',
           backgroundImage: `url(
@@ -25,7 +25,18 @@ export default function Personal() {
           backgroundRepeat: 'no-repeat',
           zIndex: '-100',
         }}
-      ></div>
+      />
+      <div
+        className={styles.with__transition}
+        style={{
+          backgroundColor: 'black',
+          width: '100%',
+          height: '100%',
+          background: 'black',
+          position: 'fixed',
+          zIndex: '-200',
+        }}
+      />
       <div
         className={styles.centered}
         style={{ height: '100vh', zIndex: '100' }}
@@ -78,7 +89,7 @@ export default function Personal() {
           >
             Travel Log
           </Link>
-          <Link
+          {/* <Link
             href={'gallery/dontttwice'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -88,7 +99,7 @@ export default function Personal() {
             onMouseLeave={() => setBackgroundImage(blackBackground)}
           >
             Dont Think Twice
-          </Link>
+          </Link> */}
         </ul>
       </div>
     </>

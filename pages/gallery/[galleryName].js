@@ -30,6 +30,7 @@ export async function getStaticProps(context) {
   }
   const results = await search({
     expression: `folder="photo-portfolio/personal/${galleryName}"`,
+    max_results: 500,
   });
 
   const { resources, next_cursor: nextCursor } = results;

@@ -41,13 +41,7 @@ export default function ImageGallery(props) {
                 photos.map((image) => {
                   startingPoint++;
                   return (
-                    <
-                      // style={{
-                      //   width: '100vw',
-                      //   height: '100vh',
-                      //   overflowY: 'scroll',
-                      // }}
-                    >
+                    <>
                       <Image
                         width="500"
                         height="500"
@@ -72,42 +66,6 @@ export default function ImageGallery(props) {
           </ResponsiveMasonry>
         </div>
       )}
-      {/* {showGrid && (
-        <Box sx={{ width: '100vw', height: '100vh', overflowY: 'scroll' }}>
-          <ImageList
-            variant="masonry"
-            cols={3}
-            gap={27}
-            style={{ padding: '20px' }}
-          >
-            {photos &&
-              photos.map((image) => {
-                startingPoint++;
-                return (
-                  <ImageListItem key={image.img} style={{ overflow: 'hidden' }}>
-                    <Image
-                      width="500"
-                      height="500"
-                      loading="lazy"
-                      // sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
-                      style={{
-                        height: 'auto',
-                        width: 'auto',
-                      }}
-                      src={image.image}
-                      alt={startingPoint} //adding a counter to be know which image we clicked
-                      onClick={(e) => {
-                        setStartingPoint(e.target.alt);
-
-                        gridSwitch();
-                      }}
-                    />
-                  </ImageListItem>
-                );
-              })}
-          </ImageList>
-        </Box>
-      )} */}
       {!showGrid && (
         <div>
           <Carousel
