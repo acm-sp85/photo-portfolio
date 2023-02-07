@@ -3,17 +3,16 @@ import { useState, useEffect } from 'react';
 import styles from './../../styles/Home.module.scss';
 
 import Image from 'next/image';
-import { CldImage } from 'next-cloudinary';
 import Carousel from './Carousel';
-import Box from '@mui/material/Box';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import useWindowSize from './useWindowSize';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
   const [showGrid, setShowGrid] = useState(props.showGrid);
   let [startingPoint, setStartingPoint] = useState(1);
+  let [scrollPosition, setScrollPosition] = useState(0);
+  const { width, height } = useWindowSize();
 
   useEffect(() => {
     setPhotos(props.images);
@@ -21,13 +20,30 @@ export default function ImageGallery(props) {
     if (props.grid) {
       setShowGrid(props.grid);
     }
+    if (width <= 750) {
+      setShowGrid(true);
+    }
   }, [props]);
 
-  useEffect(() => {}, [startingPoint]);
+  // useEffect(() => {}, [startingPoint]);
 
   const gridSwitch = () => {
-    setShowGrid(!showGrid);
+    if (width > 750) {
+      setShowGrid(!showGrid);
+    }
   };
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className={styles.image_gallery}>
@@ -52,10 +68,11 @@ export default function ImageGallery(props) {
                           width: 'auto',
                         }}
                         src={image.image}
+                        key={image.id}
                         alt={startingPoint} //adding a counter to be know which image we clicked
                         onClick={(e) => {
                           setStartingPoint(e.target.alt);
-
+                          console.log(scrollPosition);
                           gridSwitch();
                         }}
                       />

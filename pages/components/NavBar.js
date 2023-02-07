@@ -81,12 +81,19 @@ export default function NavBar() {
             onMouseEnter={() => setTogglePhoto(!togglePhoto)}
             onMouseLeave={() => setTogglePhoto(false)}
           >
-            <Link href={'/'}>PHOTOGRAPHY</Link>
+            <Link href={''}>PHOTOGRAPHY</Link>
             {togglePhoto ? (
               <div className={styles.nav__photography__items}>
                 {/* <Link href={'/overview'}>OVERVIEW</Link> */}
-                <Link href={'/personal'}>PERSONAL</Link>
-                <Link href={'/assignments'}>ASSIGNMENTS</Link>
+                <Link href={'/personal'} onClick={() => setTogglePhoto(false)}>
+                  PERSONAL
+                </Link>
+                <Link
+                  href={'/assignments'}
+                  onClick={() => setTogglePhoto(false)}
+                >
+                  ASSIGNMENTS
+                </Link>
               </div>
             ) : (
               <></>
@@ -97,12 +104,27 @@ export default function NavBar() {
             onMouseEnter={() => setToggleFilms(!toggleFilms)}
             onMouseLeave={() => setToggleFilms(false)}
           >
-            <Link href={'/film'}>FILM</Link>
+            <Link href={''}>FILM</Link>
             {toggleFilms ? (
               <div className={styles.nav__photography__items}>
-                <Link href={'/films/grain'}>GRAIN</Link>
-                <Link href={'/films/asiad'}>ASIAD</Link>
-                <Link href={'/films/tainted'}>TAINTED</Link>
+                <Link
+                  href={'/films/grain'}
+                  onClick={() => setToggleFilms(false)}
+                >
+                  GRAIN
+                </Link>
+                <Link
+                  href={'/films/asiad'}
+                  onClick={() => setToggleFilms(false)}
+                >
+                  ASIAD
+                </Link>
+                <Link
+                  href={'/films/tainted'}
+                  onClick={() => setToggleFilms(false)}
+                >
+                  TAINTED
+                </Link>
                 {/* <Link href={'/films/assignments'}>ASSIGNMENTS</Link> */}
               </div>
             ) : (
