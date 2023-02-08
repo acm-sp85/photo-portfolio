@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Image from 'next/image';
-import { CldImage } from 'next-cloudinary';
 import styles from './../../styles/Home.module.scss';
 import { useState, useEffect } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -32,7 +31,7 @@ export default function Carousel({
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
-  }, [counter]);
+  }, [counter, gridSwitch, setStartingPoint, images.length]);
 
   const goLeft = () => {
     if (counter !== 0) {
