@@ -3,16 +3,20 @@ import { useEffect, useState } from 'react';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 import ImageGallery from '../components/ImageGallery';
 import styles from '../../styles/Home.module.scss';
+import useWindowSize from '../components/hooks/useWindowSize';
 
 export default function Gallery({ images, nextCursor, folders, grid }) {
   let router = useRouter();
   let folder = router.query.galleryName;
   let [photosToDisplay, setPhotosToDisplay] = useState(images);
-
+  const { width, height } = useWindowSize();
   return (
     <div>
       <h1 className={styles.sectionTitle}>{router.query.galleryName}</h1>
-      <ImageGallery images={images} showGrid={false} grid={grid} />
+      {width < 750 && <ImageGallery images={images} grid={true} />}
+      {width > 750 && <ImageGallery images={images} grid={grid} />}
+      {/* <ImageGallery images={images} grid={grid} /> */}
+      {/* <ImageGallery images={images} showGrid={false} grid={grid} /> */}
     </div>
   );
 }
@@ -20,13 +24,13 @@ export default function Gallery({ images, nextCursor, folders, grid }) {
 // via getStaticProps we are making our API call
 export async function getStaticProps(context) {
   const galleryName = context.params.galleryName;
-  let grid = false;
+  let grid = true;
   if (
-    galleryName !== 'street-studies' &&
-    galleryName !== 'old-old-ny' &&
-    galleryName !== 'dontttwice'
+    galleryName == 'street-studies' ||
+    galleryName == 'old-old-ny' ||
+    galleryName == 'dontttwice'
   ) {
-    grid = true;
+    grid = false;
   }
   const results = await search({
     expression: `folder="photo-portfolio/personal/${galleryName}"`,

@@ -17,12 +17,14 @@ export default function Ram({ images }) {
   }, [memories]);
   return (
     <div className={styles.ram__block}>
-      <div className={styles.ram__images}>
+      <div>
         {memories[counter] && (
           <Image
+            className={`${styles.ram__images} ${styles.centered}`}
             src={memories[counter].image}
             width={memories[counter].width}
             height={memories[counter].height}
+            objectFit="contain"
             alt={counter}
             onClick={() => {
               let aux = [...memories];
@@ -34,8 +36,11 @@ export default function Ram({ images }) {
         )}
       </div>
       <p1 className={styles.ram__text}>
-        Random Access Memories: a collection of personal photographs with no
-        order. The way our brains work - click to randomize -
+        "Random Access Memories" is an exploration of the ever-changing nature
+        of memory. Presented as a personal diary, the display is rearranged
+        randomly each time you visit this page, reflecting the unpredictable
+        nature of memory recall. The collection invites to reflect on how our
+        memories shape and define us, despite their imperfections.
       </p1>
     </div>
   );

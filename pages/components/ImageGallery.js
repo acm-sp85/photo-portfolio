@@ -5,11 +5,11 @@ import styles from './../../styles/Home.module.scss';
 import Image from 'next/image';
 import Carousel from './Carousel';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import useWindowSize from './useWindowSize';
+import useWindowSize from '../components/hooks/useWindowSize';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);
-  const [showGrid, setShowGrid] = useState(props.showGrid);
+  const [showGrid, setShowGrid] = useState(props.grid);
   let [startingPoint, setStartingPoint] = useState(1);
   let [scrollPosition, setScrollPosition] = useState(0);
   const { width, height } = useWindowSize();
@@ -17,19 +17,13 @@ export default function ImageGallery(props) {
   useEffect(() => {
     setPhotos(props.images);
     setStartingPoint(0);
-    if (props.grid) {
-      setShowGrid(props.grid);
-    }
-    if (width <= 750) {
-      setShowGrid(true);
-    }
   }, [props]);
-
-  // useEffect(() => {}, [startingPoint]);
 
   const gridSwitch = () => {
     if (width > 750) {
       setShowGrid(!showGrid);
+    } else {
+      setStartingPoint(0);
     }
   };
   const handleScroll = () => {

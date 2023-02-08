@@ -37,20 +37,21 @@ export default function Assignments() {
           zIndex: '-200',
         }}
       />
-      <div className={styles.centered}>
+      <div className={`${styles.list__block} ${styles.centered}`}>
         <ul className={styles.list}>
           <Link
+            className={styles.list__name}
             href={'/assignments/chase-bank'}
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg'
               )
             }
-            // onMouseLeave={() => setBackgroundImage(whiteBackground)}
           >
             Chase Bank
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/vogue'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -62,6 +63,7 @@ export default function Assignments() {
           </Link>
 
           <Link
+            className={styles.list__name}
             href={'/assignments/telva'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -72,6 +74,7 @@ export default function Assignments() {
             Telva
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/off-white'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -83,6 +86,7 @@ export default function Assignments() {
           </Link>
 
           <Link
+            className={styles.list__name}
             href={'/assignments/sylvain'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -93,6 +97,7 @@ export default function Assignments() {
             SYLVAIN
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/pace'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -103,6 +108,7 @@ export default function Assignments() {
             Pace
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/nuvolari'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -113,6 +119,7 @@ export default function Assignments() {
             Nuvolari - Fuori Corso
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/usb'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -123,6 +130,7 @@ export default function Assignments() {
             Union Savings Bank
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/airama'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -133,6 +141,7 @@ export default function Assignments() {
             Airama
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/sunday-times'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -143,6 +152,7 @@ export default function Assignments() {
             The Sunday Times
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/wok-bao'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -153,6 +163,7 @@ export default function Assignments() {
             Wok & Bao
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/dazzler'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -163,6 +174,7 @@ export default function Assignments() {
             Dazzler Hotel
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/stone-island'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -177,6 +189,7 @@ export default function Assignments() {
           <Link href={'/assignments/carolina-herrera'}>Carolina Herrera</Link>
         <Link href={'/assignments/luxottica'}>Luxottica</Link> */}
           <Link
+            className={styles.list__name}
             href={'/assignments/uag'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -187,6 +200,7 @@ export default function Assignments() {
             Urban Atelier Group
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/gift-of-time'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -200,6 +214,7 @@ export default function Assignments() {
           {/* <Link href={'/assignments/church-st'}>Church Street Project</Link> */}
           {/* <Link href={'/assignments/blink'}>Blink</Link> */}
           <Link
+            className={styles.list__name}
             href={'/assignments/mrka'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -210,6 +225,7 @@ export default function Assignments() {
             MRKA
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/lonely-clay'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -220,6 +236,7 @@ export default function Assignments() {
             Lonely clay
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/coma-store'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -230,6 +247,7 @@ export default function Assignments() {
             Coma Store
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/henry-julier'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -240,6 +258,7 @@ export default function Assignments() {
             Henry Julier
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/arizona'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -250,6 +269,7 @@ export default function Assignments() {
             Arizona
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/olea'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -260,6 +280,7 @@ export default function Assignments() {
             Olea Herbals
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/perrier'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -271,6 +292,7 @@ export default function Assignments() {
           </Link>
 
           <Link
+            className={styles.list__name}
             href={'/assignments/demelier'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -281,6 +303,7 @@ export default function Assignments() {
             DeMelier
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/ismine'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -291,6 +314,7 @@ export default function Assignments() {
             Ismine
           </Link>
           <Link
+            className={styles.list__name}
             href={'/assignments/kionita'}
             onMouseEnter={() =>
               setBackgroundImage(

@@ -38,11 +38,12 @@ export default function Personal() {
         }}
       />
       <div
-        className={styles.centered}
+        className={`${styles.list__block} ${styles.centered}`}
         style={{ height: '100vh', zIndex: '100' }}
       >
         <ul className={styles.list}>
           <Link
+            className={styles.list__name}
             href={'gallery/street-studies'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -55,6 +56,7 @@ export default function Personal() {
           </Link>
 
           <Link
+            className={styles.list__name}
             href={'ram'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -67,6 +69,7 @@ export default function Personal() {
           </Link>
 
           <Link
+            className={styles.list__name}
             href={'gallery/old-old-ny'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -78,6 +81,7 @@ export default function Personal() {
             Old Old New York
           </Link>
           <Link
+            className={styles.list__name}
             className={styles.with__transition}
             href={'/travel'}
             onMouseEnter={() =>
@@ -90,6 +94,7 @@ export default function Personal() {
             Travel Log
           </Link>
           {/* <Link
+          className={styles.list__name}
             href={'gallery/dontttwice'}
             onMouseEnter={() =>
               setBackgroundImage(

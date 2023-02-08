@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './../../styles/Home.module.scss';
 import { useState, useEffect } from 'react';
+import useWindowSize from './hooks/useWindowSize';
 
 export default function NavBar() {
   const [togglePhoto, setTogglePhoto] = useState(false);
@@ -138,27 +139,4 @@ export default function NavBar() {
       )}
     </div>
   );
-}
-
-function useWindowSize() {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    window.addEventListener('resize', handleResize);
-
-    handleResize();
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-  return windowSize;
 }
