@@ -14,6 +14,22 @@ export default function Carousel({
   let [counter, setCounter] = useState(startingPoint - 1);
   let [images, setImages] = useState(photos);
 
+  const goLeft = () => {
+    if (counter !== 0) {
+      setCounter(counter - 1);
+    } else if (counter === 0) {
+      setCounter(images.length - 1);
+    }
+  };
+
+  const goRight = () => {
+    if (counter < photos.length - 1) {
+      setCounter(counter + 1);
+    } else if (counter === images.length - 1) {
+      setCounter(0);
+    }
+  };
+
   useEffect(() => {
     const keyDownHandler = (e) => {
       if (e.code === 'ArrowRight') {
@@ -31,23 +47,8 @@ export default function Carousel({
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
-  }, [counter, goLeft, goRight]);
+  }, [counter, goLeft, goRight, gridSwitch, setStartingPoint]);
 
-  const goLeft = () => {
-    if (counter !== 0) {
-      setCounter(counter - 1);
-    } else if (counter === 0) {
-      setCounter(images.length - 1);
-    }
-  };
-
-  const goRight = () => {
-    if (counter < photos.length - 1) {
-      setCounter(counter + 1);
-    } else if (counter === images.length - 1) {
-      setCounter(0);
-    }
-  };
   return (
     <div className={styles.carouselContainer}>
       <KeyboardArrowLeftIcon

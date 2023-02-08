@@ -9,17 +9,16 @@ export default function Home({ images }) {
   let [backgroundPool, setBackgroundPool] = useState([...images]);
   let counter = 0;
 
-  useEffect(() => {
-    const interval = setInterval(() => updateBackground(), 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const updateBackground = () => {
     if (counter >= backgroundPool.length) counter = 0;
     setBackgroundImage(backgroundPool[counter].image);
     counter++;
   };
+  useEffect(() => {
+    const interval = setInterval(() => updateBackground(), 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className={styles.container}>

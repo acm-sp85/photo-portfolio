@@ -81,8 +81,7 @@ export default function Personal() {
             Old Old New York
           </Link>
           <Link
-            className={styles.list__name}
-            className={styles.with__transition}
+            className={`${styles.list__name} ${styles.with__transition}`}
             href={'/travel'}
             onMouseEnter={() =>
               setBackgroundImage(

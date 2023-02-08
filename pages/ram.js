@@ -14,7 +14,7 @@ export default function Ram({ images }) {
       setMemories(images);
     }
     console.log('length: ' + memories.length);
-  }, [memories]);
+  }, [memories, images]);
   return (
     <div className={styles.ram__block}>
       <div>
