@@ -103,7 +103,7 @@ export default function Personal() {
             }
             onMouseLeave={() => setBackgroundImage(blackBackground)}
           >
-            Dont Think Twice
+            Don&apos;t Think Twice
           </Link> */}
         </ul>
       </div>

@@ -36,11 +36,12 @@ export default function Ram({ images }) {
         )}
       </div>
       <p1 className={styles.ram__text}>
-        "Random Access Memories" is an exploration of the ever-changing nature
-        of memory. Presented as a personal diary, the display is rearranged
-        randomly each time you visit this page, reflecting the unpredictable
-        nature of memory recall. The collection invites to reflect on how our
-        memories shape and define us, despite their imperfections.
+        &lsquo;Random Access Memories&lsquo; is an exploration of the
+        ever-changing nature of memory. Presented as a personal diary, the
+        display is rearranged randomly each time you visit this page, reflecting
+        the unpredictable nature of memory recall. The collection invites to
+        reflect on how our memories shape and define us, despite their
+        imperfections.
       </p1>
     </div>
   );

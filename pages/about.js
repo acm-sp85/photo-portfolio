@@ -15,12 +15,12 @@ export default function about() {
           Spain. He moved to New York to advance his career and has worked for
           various brands and magazines as a freelancer. In his free time, Alex
           collaborates with other artists and works on personal projects. In
-          2016, he held his first solo show, "don't think twice," which explored
-          the relationship between photography and editing in street
-          photography. In 2021, his co-directed documentary, "GRAIN," premiered
-          at the DOC NYC Film Festival in New York City after four years of
-          production. The film has since been shown at several international
-          film festivals.
+          2016, he held his first solo show, &lsquo;don't think twice&lsquo;
+          which explored the relationship between photography and editing in
+          street photography. In 2021, his co-directed documentary,
+          &lsquo;GRAIN&lsquo; premiered at the DOC NYC Film Festival in New York
+          City after four years of production. The film has since been shown at
+          several international film festivals.
         </p>
         {/* <p className={styles.about__text}>
           CLIENTS Vogue | The Sunday Times | JPM Chase | The Tennis Channel |
