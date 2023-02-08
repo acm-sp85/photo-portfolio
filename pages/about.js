@@ -10,17 +10,17 @@ export default function about() {
     <div className={`${styles.about__container} ${styles.centered}`}>
       <div className={styles.about__left}>
         <p className={styles.about__text}>
-          Alex Contell is a photographer and filmmaker with a Master's degree in
-          Communication and Media Studies from CEU-University of Valencia,
-          Spain. He moved to New York to advance his career and has worked for
-          various brands and magazines as a freelancer. In his free time, Alex
-          collaborates with other artists and works on personal projects. In
-          2016, he held his first solo show, &lsquo;don't think twice&lsquo;
-          which explored the relationship between photography and editing in
-          street photography. In 2021, his co-directed documentary,
-          &lsquo;GRAIN&lsquo; premiered at the DOC NYC Film Festival in New York
-          City after four years of production. The film has since been shown at
-          several international film festivals.
+          Alex Contell is a photographer and filmmaker with a Master&apos;s
+          degree in Communication and Media Studies from CEU-University of
+          Valencia, Spain. He moved to New York to advance his career and has
+          worked for various brands and magazines as a freelancer. In his free
+          time, Alex collaborates with other artists and works on personal
+          projects. In 2016, he held his first solo show, &lsquo;don&apos;t
+          think twice&lsquo; which explored the relationship between photography
+          and editing in street photography. In 2021, his co-directed
+          documentary, &lsquo;GRAIN&lsquo; premiered at the DOC NYC Film
+          Festival in New York City after four years of production. The film has
+          since been shown at several international film festivals.
         </p>
         {/* <p className={styles.about__text}>
           CLIENTS Vogue | The Sunday Times | JPM Chase | The Tennis Channel |
