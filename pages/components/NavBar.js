@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './../../styles/Home.module.scss';
 import { useState, useEffect } from 'react';
-import useWindowSize from './hooks/useWindowSize';
+import useWindowSize from '/useWindowSize';
 
 export default function NavBar() {
   const [togglePhoto, setTogglePhoto] = useState(false);

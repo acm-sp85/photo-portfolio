@@ -5,7 +5,7 @@ import styles from './../../styles/Home.module.scss';
 import Image from 'next/image';
 import Carousel from './Carousel';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import useWindowSize from '../components/hooks/useWindowSize';
+import useWindowSize from '/useWindowSize';
 
 export default function ImageGallery(props) {
   let [photos, setPhotos] = useState(props.images);

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 import ImageGallery from '../components/ImageGallery';
 import styles from '../../styles/Home.module.scss';
-import useWindowSize from '../components/hooks/useWindowSize';
+import useWindowSize from '/useWindowSize';
 
 export default function Gallery({ images, nextCursor, folders, grid }) {
   let router = useRouter();
