@@ -31,7 +31,7 @@ export default function Carousel({
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
-  }, [counter, gridSwitch, setStartingPoint, images.length]);
+  }, [counter, goLeft, goRight]);
 
   const goLeft = () => {
     if (counter !== 0) {
