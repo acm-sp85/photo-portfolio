@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss';
 
 export default function Home({ images }) {
   let background =
-    'https://res.cloudinary.com/acm-85/image/upload/v1675963304/photo-portfolio/landing/landing-5_pvnjnb.jpg';
+    'https://res.cloudinary.com/acm-85/image/upload/v1675963304/photo-portfolio/landing/landing-6_gjlbw4.jpg';
   let [backgroundImage, setBackgroundImage] = useState(background);
   let [backgroundPool, setBackgroundPool] = useState([...images]);
   let counter = 0;

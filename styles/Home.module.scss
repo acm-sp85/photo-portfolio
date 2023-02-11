@@ -79,6 +79,22 @@ $color-primary: #f3a200;
 
 // VIDEO --------------------------------------
 
+.container {
+  &__landing {
+    &__1 {
+      height: 100vh;
+    }
+    &__2 {
+      height: 100vh;
+      background-color: #000000;
+    }
+    &__3 {
+      height: 100vh;
+      background-color: #f3a200;
+    }
+  }
+}
+
 .video {
   object-fit: cover;
   width: 100%;

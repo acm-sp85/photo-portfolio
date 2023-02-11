@@ -38,16 +38,36 @@ export default function Travel() {
           >
             Italy
           </Link>
-          <Link href={'gallery/oaxaca'}>Oaxaca</Link>
-          <Link href={'gallery/la'}>LA</Link>
-          <Link href={'gallery/new-orleans'}>New Orleans</Link>
-          <Link href={'gallery/spain'}>Spain</Link>
-          <Link href={'gallery/morocco'}>Morocco</Link>
-          <Link href={'gallery/jordan'}>Jordan</Link>
-          <Link href={'gallery/hawaii'}>Hawaii</Link>
-          <Link href={'gallery/berlin'}>Berlin</Link>
-          <Link href={'gallery/miami'}>Miami</Link>
-          <Link href={'gallery/chicago'}>Chicago</Link>
+          <Link href={'gallery/oaxaca'} className={styles.list__name}>
+            Oaxaca
+          </Link>
+          <Link href={'gallery/la'} className={styles.list__name}>
+            LA
+          </Link>
+          <Link href={'gallery/new-orleans'} className={styles.list__name}>
+            New Orleans
+          </Link>
+          <Link href={'gallery/spain'} className={styles.list__name}>
+            Spain
+          </Link>
+          <Link href={'gallery/morocco'} className={styles.list__name}>
+            Morocco
+          </Link>
+          <Link href={'gallery/jordan'} className={styles.list__name}>
+            Jordan
+          </Link>
+          <Link href={'gallery/hawaii'} className={styles.list__name}>
+            Hawaii
+          </Link>
+          <Link href={'gallery/berlin'} className={styles.list__name}>
+            Berlin
+          </Link>
+          <Link href={'gallery/miami'} className={styles.list__name}>
+            Miami
+          </Link>
+          <Link href={'gallery/chicago'} className={styles.list__name}>
+            Chicago
+          </Link>
         </ul>
       </div>
     </>

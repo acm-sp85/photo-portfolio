@@ -40,7 +40,7 @@ export default function NavBar() {
             onMouseEnter={() => setToggleFilms(!toggleFilms)}
             onMouseLeave={() => setToggleFilms(false)}
           >
-            <Link href={''}>FILM</Link>
+            <Link href={'/film'}>FILM</Link>
             {toggleFilms ? (
               <div className={styles.phone_nav__film__items}>
                 <Link
@@ -105,7 +105,7 @@ export default function NavBar() {
             onMouseEnter={() => setToggleFilms(!toggleFilms)}
             onMouseLeave={() => setToggleFilms(false)}
           >
-            <Link href={''}>FILM</Link>
+            <Link href={'/film'}>FILM</Link>
             {toggleFilms ? (
               <div className={styles.nav__photography__items}>
                 <Link
