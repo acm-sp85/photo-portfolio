@@ -79,22 +79,55 @@ $color-primary: #f3a200;
 
 // VIDEO --------------------------------------
 
-.container {
-  &__landing {
-    &__1 {
-      height: 100vh;
-    }
-    &__2 {
-      height: 100vh;
-      background-color: #000000;
-    }
-    &__3 {
-      height: 100vh;
-      background-color: #f3a200;
-    }
+// .container {
+//   &__card {
+//     display: flex;
+//     &__1 {
+//       height: 100vh;
+//       background-color: rgb(163, 156, 156);
+//       // background-image: url('https://res.cloudinary.com/acm-85/image/upload/v1676301440/photo-portfolio/films/Natalie-Stuart-lg_peaj0f.png');
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+//     &__2 {
+//       height: 100vh;
+//       background-image: url('https://res.cloudinary.com/acm-85/image/upload/v1676305791/photo-portfolio/films/Thumbnail_Song_in_a_Day_xmaiev.jpg');
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+//     &__3 {
+//       height: 100vh;
+//       background-image: url('https://res.cloudinary.com/acm-85/image/upload/v1676301440/photo-portfolio/films/Natalie-Stuart-lg_peaj0f.png');
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+//   }
+// }
+.video__card {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  align-items: center;
+  & h3,
+  h4,
+  p {
+    margin: 0px;
   }
 }
+.description {
+  justify-content: center;
+  align-content: center;
+  max-width: 700px;
+  margin-left: 1.5vw;
+  color: rgba(90, 90, 90, 0.65);
+  font-size: 1.2rem;
+  line-height: 1.9;
+}
 
+.player {
+  max-width: 700px;
+  margin: auto;
+}
 .video {
   object-fit: cover;
   width: 100%;
