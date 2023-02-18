@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function Assignments() {
+export default function Commissioned() {
   const whiteBackground =
     'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg';
   let [backgroundImage, setBackgroundImage] = useState(whiteBackground);

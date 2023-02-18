@@ -25,10 +25,10 @@ export default function NavBar() {
                   PERSONAL
                 </Link>
                 <Link
-                  href={'/assignments'}
+                  href={'/commissioned'}
                   onClick={() => setTogglePhoto(false)}
                 >
-                  ASSIGNMENTS
+                  COMMISSIONED
                 </Link>
               </div>
             ) : (
@@ -37,8 +37,8 @@ export default function NavBar() {
           </div>
           <div
             className={styles.phone_nav__film}
-            onMouseEnter={() => setToggleFilms(!toggleFilms)}
-            onMouseLeave={() => setToggleFilms(false)}
+            // onMouseEnter={() => setToggleFilms(!toggleFilms)}
+            // onMouseLeave={() => setToggleFilms(false)}
           >
             <Link href={'/film'}>FILM</Link>
             {toggleFilms ? (
@@ -61,7 +61,7 @@ export default function NavBar() {
                 >
                   TAINTED
                 </Link>
-                {/* <Link href={'/films/assignments'}>ASSIGNMENTS</Link> */}
+                {/* <Link href={'/films/commissioned'}>commissioned</Link> */}
               </div>
             ) : (
               <></>
@@ -90,10 +90,10 @@ export default function NavBar() {
                   PERSONAL
                 </Link>
                 <Link
-                  href={'/assignments'}
+                  href={'/commissioned'}
                   onClick={() => setTogglePhoto(false)}
                 >
-                  ASSIGNMENTS
+                  COMMISSIONED
                 </Link>
               </div>
             ) : (
@@ -102,8 +102,8 @@ export default function NavBar() {
           </div>
           <div
             className={styles.nav__film}
-            onMouseEnter={() => setToggleFilms(!toggleFilms)}
-            onMouseLeave={() => setToggleFilms(false)}
+            // onMouseEnter={() => setToggleFilms(!toggleFilms)}
+            // onMouseLeave={() => setToggleFilms(false)}
           >
             <Link href={'/film'}>FILM</Link>
             {toggleFilms ? (
@@ -126,7 +126,7 @@ export default function NavBar() {
                 >
                   TAINTED
                 </Link>
-                {/* <Link href={'/films/assignments'}>ASSIGNMENTS</Link> */}
+                {/* <Link href={'/films/commissioned'}>commissioned</Link> */}
               </div>
             ) : (
               <></>

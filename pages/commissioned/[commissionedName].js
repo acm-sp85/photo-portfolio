@@ -5,7 +5,7 @@ import ImageGallery from '../components/ImageGallery';
 import styles from '../../styles/Home.module.scss';
 import ReactPlayer from 'react-player';
 
-export default function Assignments({ images, nextCursor, folders }) {
+export default function Commissioned({ images, nextCursor, folders }) {
   let router = useRouter();
   let folder = router.query.assignmentName;
 

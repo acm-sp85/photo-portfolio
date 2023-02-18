@@ -104,14 +104,23 @@ $color-primary: #f3a200;
 //   }
 // }
 .video__card {
-  height: 100vh;
   display: grid;
   grid-template-columns: 50vw 50vw;
+
+  min-height: 100vh;
+  @media (max-width: 750px) {
+    display: block;
+    padding-top: 50px;
+    min-height: auto;
+    height: auto;
+  }
+
   align-items: center;
   & h3,
   h4,
   p {
     margin: 0px;
+    font-size: 1rem;
   }
 }
 .description {
@@ -137,7 +146,7 @@ $color-primary: #f3a200;
   background-color: #000000;
 }
 
-// ASSIGNMENTS & PERSONAL LISTS -------------------------------
+// COMMISSIONED & PERSONAL LISTS -------------------------------
 
 .list__block {
   display: flex;

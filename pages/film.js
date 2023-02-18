@@ -11,7 +11,13 @@ export default function Film() {
 
   return (
     <>
-      <div className={styles.video__card}>
+      <div
+        className={styles.video__card}
+        // style={{
+        //   backgroundImage: `url('https://res.cloudinary.com/acm-85/image/upload/v1676301440/photo-portfolio/films/Natalie-Stuart-lg_peaj0f.png')`,
+        //   opacity: '.5'
+        // }}
+      >
         <div className={styles.description}>
           <h3>GRAIN: ANALOG RENAISSANCE</h3>
           <h4>2021</h4>
@@ -34,15 +40,16 @@ export default function Film() {
             OR IS IT SOMETHING ELSE ENTIRELY?
           </p>
           <br />
-          <p>
+          {/* <p>
             GRAIN is currently being shown in film festivals and is not
             available to watch online.{' '}
-          </p>
+          </p> */}
         </div>
         <ReactPlayer
           url={'https://vimeo.com/683031798'}
           playing={false}
           controls={true}
+          pip={false}
           width="100%"
           height="100%"
           className={styles.player}
@@ -54,22 +61,44 @@ export default function Film() {
           <h4>2020</h4>
           <br />
           <p style={{ textTransform: 'uppercase' }}>
-            This documentary follows the journey of talented musician, Emanuel
-            Ayvas, as he writes and produces a whole song in just 24 hours.
-            Viewers are given an inside look at Emanuel&apos;s creative process,
-            from idea generation to recording. Throughout the experience,
-            Emanuel handles the pressure with determination as he strives to
-            bring his music to life. Emanuel&apos;s journey emphasizes the
-            importance of embracing the creative process without being too
-            focused on the end result. The real reward lies in the experience of
-            creation and the satisfaction it brings. This film is sure to
-            inspire viewers to tackle their own creative projects.
+            Follow Emanuel Ayvas as he composes and records a new song in just
+            24 hours. Get an intimate look at the steps involved in his creative
+            process, from the inception of ideas to the final recording. This
+            documentary aims to inspire and motivate artists who may be facing
+            challenges in their own creative pursuits. By highlighting the
+            significance of embracing the creative process without fear of
+            failure, this film hopes to unblock creative potential.
           </p>
         </div>
         <ReactPlayer
           url={'https://vimeo.com/447316206'}
           playing={false}
           controls={true}
+          pip={false}
+          width="100%"
+          height="100%"
+          className={styles.player}
+        />
+      </div>
+      <div className={styles.video__card}>
+        <div className={styles.description}>
+          <h3>TAINTED LOVE</h3>
+          <h4>2018</h4>
+          <br />
+          <p style={{ textTransform: 'uppercase' }}>
+            Tainted Love is a fashion film that tells the story of a couple who
+            just met. The film follows the dynamic between a man who is
+            infatuated with an older woman, who only wants to play with him.
+            Through its depiction of the ups and downs of their relationship,
+            Tainted Love offers a look at the complexities of desire, power, and
+            love.
+          </p>
+        </div>
+        <ReactPlayer
+          url={'https://vimeo.com/143644757/dd3de1d7c0'}
+          playing={false}
+          controls={true}
+          pip={false}
           width="100%"
           height="100%"
           className={styles.player}
@@ -78,3 +107,17 @@ export default function Film() {
     </>
   );
 }
+
+//LINKS TO COMMERCIAL
+
+/*
+
+ADVANTAGE OMAR:
+1: https://www.youtube.com/watch?v=8isLnDv4PKs&t=187s
+2: https://www.youtube.com/watch?v=sR9dUxwvE9k&t=19s
+3: https://www.youtube.com/watch?v=3_ZnGxmfBKY&t=8s
+4: https://www.youtube.com/watch?v=k8Eh5o-nkj8&t=19s
+5: https://www.youtube.com/watch?v=RS3q42fELhw&t=1s
+6: https://www.youtube.com/watch?v=-52ioxL8474&t=2s
+
+*/
