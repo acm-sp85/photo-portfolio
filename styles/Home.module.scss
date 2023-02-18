@@ -242,7 +242,7 @@ $color-primary: #f3a200;
   color: rgba(90, 90, 90, 0.65);
   font-size: 1.5rem;
   line-height: 1.9;
-  // text-align: left;
+
   padding: 50px;
 }
 .about__contact {
@@ -255,25 +255,25 @@ $color-primary: #f3a200;
 }
 
 .about__right {
-  // background-color: beige;
   height: 100vh;
+  @media (max-width: 750px) {
+    height: auto;
+  }
   display: grid;
   justify-content: center;
   align-items: center;
 }
 
 .about__right__top {
-  // background-color: #f3a200;
 }
 
 .about__right__bottom {
-  // background-color: #2900f3;
   text-align: left;
   margin-top: 300px;
 }
 .about__left {
-  // background-color: aqua;
   height: 100vh;
+
   display: grid;
   justify-content: center;
   align-items: center;
