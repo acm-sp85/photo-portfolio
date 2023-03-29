@@ -34,15 +34,12 @@ export default function about() {
           <h2 className={styles.about__contact}>CONTACT</h2>
           <h2 className={styles.about__contact}>Alex Contell</h2>
           <h2 className={styles.about__contact}>+1 516 590 9314</h2>
-          <a
-            className={styles.about__contact}
-            href="mailto:info@alexcontell.com"
-          >
-            info@alexcontell.com
+          <a className={styles.about__contact} href="mailto:acontell@gmail.com">
+            acontell@gmail.com
           </a>
           <br />
           <br />
-          <h2 className={styles.about__contact}>INFO</h2>
+          {/* <h2 className={styles.about__contact}>INFO</h2> */}
           <Link
             className={styles.about__contact}
             href="https://www.instagram.com/alex_contell/"

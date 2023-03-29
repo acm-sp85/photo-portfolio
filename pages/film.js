@@ -53,6 +53,7 @@ export default function Film() {
           width="100%"
           height="100%"
           className={styles.player}
+          allowfullscreen
         />
       </div>
       <div className={styles.video__card}>
@@ -78,6 +79,7 @@ export default function Film() {
           width="100%"
           height="100%"
           className={styles.player}
+          allowfullscreen
         />
       </div>
       <div className={styles.video__card}>
@@ -102,6 +104,7 @@ export default function Film() {
           width="100%"
           height="100%"
           className={styles.player}
+          allowfullscreen
         />
       </div>
     </>
