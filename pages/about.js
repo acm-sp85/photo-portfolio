@@ -21,7 +21,7 @@ export default function about() {
           documentary, &lsquo;GRAIN&lsquo; premiered at the DOC NYC Film
           Festival in New York City after four years of production. The film has
           since been shown at several international film festivals.
-        </p>
+        </p>  
         {/* <p className={styles.about__text}>
           CLIENTS Vogue | The Sunday Times | JPM Chase | The Tennis Channel |
           Spotify | MTV | Nike | Off-White | Studio Rondinone | SYLVAIN |

@@ -17,7 +17,7 @@ export default function NavBar() {
             onMouseEnter={() => setTogglePhoto(!togglePhoto)}
             onMouseLeave={() => setTogglePhoto(false)}
           >
-            <Link href={''}>PHOTOGRAPHY</Link>
+            <Link href={''}>PROJECTS</Link>
             {togglePhoto ? (
               <div className={styles.phone_nav__photography__items}>
                 {/* <Link href={'/overview'}>OVERVIEW</Link> */}
@@ -77,12 +77,15 @@ export default function NavBar() {
           <div className={styles.nav__logo}>
             <Link href={'/'}>ALEX CONTELL</Link>
           </div>
+          <div className={styles.nav__overview}>
+            <Link href={'/'}>OVERVIEW</Link>
+          </div>
           <div
             className={styles.nav__photography}
             onMouseEnter={() => setTogglePhoto(!togglePhoto)}
             onMouseLeave={() => setTogglePhoto(false)}
           >
-            <Link href={''}>PHOTOGRAPHY</Link>
+            <Link href={''}>PROJECTS</Link>
             {togglePhoto ? (
               <div className={styles.nav__photography__items}>
                 {/* <Link href={'/overview'}>OVERVIEW</Link> */}
@@ -100,37 +103,8 @@ export default function NavBar() {
               <></>
             )}
           </div>
-          <div
-            className={styles.nav__film}
-            // onMouseEnter={() => setToggleFilms(!toggleFilms)}
-            // onMouseLeave={() => setToggleFilms(false)}
-          >
+          <div className={styles.nav__film}>
             <Link href={'/film'}>FILM</Link>
-            {toggleFilms ? (
-              <div className={styles.nav__photography__items}>
-                <Link
-                  href={'/films/grain'}
-                  onClick={() => setToggleFilms(false)}
-                >
-                  GRAIN
-                </Link>
-                <Link
-                  href={'/films/asiad'}
-                  onClick={() => setToggleFilms(false)}
-                >
-                  ASIAD
-                </Link>
-                <Link
-                  href={'/films/tainted'}
-                  onClick={() => setToggleFilms(false)}
-                >
-                  TAINTED
-                </Link>
-                {/* <Link href={'/films/commissioned'}>commissioned</Link> */}
-              </div>
-            ) : (
-              <></>
-            )}
           </div>
           <div className={styles.nav__about}>
             <Link href={'/about'}>ABOUT</Link>

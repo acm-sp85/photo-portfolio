@@ -42,11 +42,11 @@ export default function ImageGallery(props) {
   return (
     <div className={styles.image_gallery}>
       {showGrid && (
-        <div style={{ padding: '30px' }}>
+        <div style={{ padding: '80px' }}>
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
           >
-            <Masonry gutter="30px">
+            <Masonry gutter="80px">
               {photos &&
                 photos.map((image) => {
                   startingPoint++;

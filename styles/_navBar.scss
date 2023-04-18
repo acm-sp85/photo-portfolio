@@ -1,20 +1,18 @@
 .nav {
   display: grid;
-  grid-template-columns: 60vw repeat(3, 1fr);
+  grid-template-columns: 40vw repeat(4, 1fr);
   height: 20px;
   z-index: 1;
-
   background: none;
   background-color: transparent;
-  // background-color: white;
   padding: 5px;
   position: fixed;
   width: 100%;
 
   > * {
     background-color: transparent;
-    // color: rgb(90, 90, 90);
-    color: rgb(201, 201, 201);
+    color: rgb(90, 90, 90);
+    // color: rgb(201, 201, 201);
     // filter: invert(1);
     // the goal is to find something like Divide in photoshop
     mix-blend-mode: difference;
@@ -27,6 +25,7 @@
     z-index: 100;
   }
 
+  &__overview,
   &__photography,
   &__film,
   &__about {
@@ -35,7 +34,6 @@
     z-index: 100;
     &__items {
       z-index: 100;
-
       text-align: right;
       display: grid;
     }
@@ -55,6 +53,13 @@
   position: fixed;
   width: 100%;
 
+  &__overview {
+    display: grid;
+    align-items: left;
+    text-align: left;
+    z-index: 100;
+  }
+
   &__photography {
     display: grid;
     align-items: left;
@@ -68,26 +73,15 @@
   }
   &__film {
     display: grid;
-    color: green;
     align-items: right;
     text-align: center;
     z-index: 100;
-    &__items {
-      z-index: 100;
-      text-align: center;
-      display: grid;
-    }
   }
   &__about {
     display: grid;
     align-items: right;
     text-align: right;
     z-index: 100;
-    &__items {
-      z-index: 100;
-      text-align: right;
-      display: grid;
-    }
   }
   > * {
     background-color: transparent;
