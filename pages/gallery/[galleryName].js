@@ -13,7 +13,14 @@ export default function Gallery({ images, nextCursor, folders, grid }) {
   return (
     <div>
       <h1 className={styles.sectionTitle}>{router.query.galleryName}</h1>
-      {width < 750 && <ImageGallery images={images} grid={true} />}
+      {width < 750 && (
+        <ImageGallery
+          images={images}
+          filename={filename}
+          folder={folder}
+          grid={true}
+        />
+      )}
       {width > 750 && <ImageGallery images={images} grid={grid} />}
       {/* <ImageGallery images={images} grid={grid} /> */}
       {/* <ImageGallery images={images} showGrid={false} grid={grid} /> */}

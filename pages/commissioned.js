@@ -5,11 +5,10 @@ import { useState } from 'react';
 
 export default function Commissioned() {
   const whiteBackground =
-    'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg';
+    'https://res.cloudinary.com/acm-85/image/upload/v1681925803/photo-portfolio/commercial/hero-images/overview-63_k72iwu.jpg';
   let [backgroundImage, setBackgroundImage] = useState(whiteBackground);
   return (
     <>
-
       <div
         className={styles.with__transition}
         style={{
@@ -40,6 +39,39 @@ export default function Commissioned() {
       />
       <div className={`${styles.list__block} ${styles.centered}`}>
         <ul className={styles.list}>
+          <Link
+            className={styles.list__name}
+            href={'/commissioned/uag'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1681925803/photo-portfolio/commercial/hero-images/overview-63_k72iwu.jpg'
+              )
+            }
+          >
+            Urban Atelier Group
+          </Link>
+          <Link
+            className={styles.list__name}
+            href={'/commissioned/sylvain'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674491071/photo-portfolio/commercial/hero-images/sylvain-1_tme442.jpg'
+              )
+            }
+          >
+            SYLVAIN
+          </Link>
+          <Link
+            className={styles.list__name}
+            href={'/commissioned/off-white'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674481537/photo-portfolio/commercial/hero-images/off-white-1_kxizck.jpg'
+              )
+            }
+          >
+            OffWhite
+          </Link>
           <Link
             className={styles.list__name}
             href={'/commissioned/chase-bank'}
@@ -74,29 +106,41 @@ export default function Commissioned() {
           >
             Telva
           </Link>
-          <Link
-            className={styles.list__name}
-            href={'/commissioned/off-white'}
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674481537/photo-portfolio/commercial/hero-images/off-white-1_kxizck.jpg'
-              )
-            }
-          >
-            OffWhite
-          </Link>
 
           <Link
             className={styles.list__name}
-            href={'/commissioned/sylvain'}
+            href={'/commissioned/henry-julier'}
             onMouseEnter={() =>
               setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674491071/photo-portfolio/commercial/hero-images/sylvain-1_tme442.jpg'
+                'https://res.cloudinary.com/acm-85/image/upload/v1674494298/photo-portfolio/commercial/henry-julier/henry-julier-5_d7via9.jpg'
               )
             }
           >
-            SYLVAIN
+            Henry Julier
           </Link>
+          <Link
+            className={styles.list__name}
+            href={'/commissioned/arizona'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674495450/photo-portfolio/commercial/arizona/Arizona-3_eiqb3n.jpg'
+              )
+            }
+          >
+            Arizona
+          </Link>
+          <Link
+            className={styles.list__name}
+            href={'/commissioned/olea'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1672158055/photo-portfolio/commercial/olea/Olea1545_viviy7.jpg'
+              )
+            }
+          >
+            Olea Herbals
+          </Link>
+
           <Link
             className={styles.list__name}
             href={'/commissioned/pace'}
@@ -186,34 +230,6 @@ export default function Commissioned() {
             StoneIsland
           </Link>
 
-          {/* <Link href={'/commissioned/balmain'}>Balmain</Link>
-          <Link href={'/commissioned/carolina-herrera'}>Carolina Herrera</Link>
-        <Link href={'/commissioned/luxottica'}>Luxottica</Link> */}
-          <Link
-            className={styles.list__name}
-            href={'/commissioned/uag'}
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1673285943/photo-portfolio/commercial/uag/02_NT_5409_sqv2u1.jpg'
-              )
-            }
-          >
-            Urban Atelier Group
-          </Link>
-          <Link
-            className={styles.list__name}
-            href={'/commissioned/gift-of-time'}
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674488404/photo-portfolio/commercial/hero-images/Gift-of-Time-1_g5ulzg.jpg'
-              )
-            }
-          >
-            Gift Of Time
-          </Link>
-
-          {/* <Link href={'/commissioned/church-st'}>Church Street Project</Link> */}
-          {/* <Link href={'/commissioned/blink'}>Blink</Link> */}
           <Link
             className={styles.list__name}
             href={'/commissioned/mrka'}
@@ -236,7 +252,25 @@ export default function Commissioned() {
           >
             Lonely clay
           </Link>
-          <Link
+          {/* <Link href={'/commissioned/balmain'}>Balmain</Link>
+          <Link href={'/commissioned/carolina-herrera'}>Carolina Herrera</Link>
+        <Link href={'/commissioned/luxottica'}>Luxottica</Link> */}
+
+          {/* <Link
+            className={styles.list__name}
+            href={'/commissioned/gift-of-time'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1674488404/photo-portfolio/commercial/hero-images/Gift-of-Time-1_g5ulzg.jpg'
+              )
+            }
+          >
+            Gift Of Time
+          </Link> */}
+
+          {/* <Link href={'/commissioned/church-st'}>Church Street Project</Link> */}
+          {/* <Link href={'/commissioned/blink'}>Blink</Link> */}
+          {/* <Link
             className={styles.list__name}
             href={'/commissioned/coma-store'}
             onMouseEnter={() =>
@@ -246,41 +280,9 @@ export default function Commissioned() {
             }
           >
             Coma Store
-          </Link>
-          <Link
-            className={styles.list__name}
-            href={'/commissioned/henry-julier'}
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674494298/photo-portfolio/commercial/henry-julier/henry-julier-5_d7via9.jpg'
-              )
-            }
-          >
-            Henry Julier
-          </Link>
-          <Link
-            className={styles.list__name}
-            href={'/commissioned/arizona'}
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674495450/photo-portfolio/commercial/arizona/Arizona-3_eiqb3n.jpg'
-              )
-            }
-          >
-            Arizona
-          </Link>
-          <Link
-            className={styles.list__name}
-            href={'/commissioned/olea'}
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1672158055/photo-portfolio/commercial/olea/Olea1545_viviy7.jpg'
-              )
-            }
-          >
-            Olea Herbals
-          </Link>
-          <Link
+          </Link> */}
+
+          {/* <Link
             className={styles.list__name}
             href={'/commissioned/perrier'}
             onMouseEnter={() =>
@@ -290,9 +292,9 @@ export default function Commissioned() {
             }
           >
             Perrier
-          </Link>
+          </Link> */}
 
-          <Link
+          {/* <Link
             className={styles.list__name}
             href={'/commissioned/demelier'}
             onMouseEnter={() =>
@@ -302,8 +304,8 @@ export default function Commissioned() {
             }
           >
             DeMelier
-          </Link>
-          <Link
+          </Link> */}
+          {/* <Link
             className={styles.list__name}
             href={'/commissioned/ismine'}
             onMouseEnter={() =>
@@ -324,7 +326,7 @@ export default function Commissioned() {
             }
           >
             Kionita
-          </Link>
+          </Link> */}
 
           {/* <Link href={'/commissioned/beto'}>Beto Garcia</Link> */}
 

@@ -20,7 +20,7 @@ export default function Film() {
       >
         <div className={styles.description}>
           <h3>GRAIN: ANALOG RENAISSANCE</h3>
-          <h4>2021</h4>
+          {/* <h4>2021</h4> */}
           <br />
           <p>
             GRAIN IS A DOCUMENTARY BY ALEX CONTELL AND TOMMASO SACCONI THAT
@@ -59,7 +59,7 @@ export default function Film() {
       <div className={styles.video__card}>
         <div className={styles.description}>
           <h3>A SONG IN A DAY</h3>
-          <h4>2020</h4>
+          {/* <h4>2020</h4> */}
           <br />
           <p style={{ textTransform: 'uppercase' }}>
             Follow Emanuel Ayvas as he composes and records a new song in just
@@ -85,7 +85,7 @@ export default function Film() {
       <div className={styles.video__card}>
         <div className={styles.description}>
           <h3>TAINTED LOVE</h3>
-          <h4>2018</h4>
+          {/* <h4>2018</h4> */}
           <br />
           <p style={{ textTransform: 'uppercase' }}>
             Tainted Love is a fashion film that tells the story of a couple who

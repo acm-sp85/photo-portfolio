@@ -8,11 +8,25 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import useWindowSize from '/useWindowSize';
 
 export default function ImageGallery(props) {
-  let [photos, setPhotos] = useState(props.images);
+  const sortedPhotos = props.images.sort((a, b) => {
+    const nameA = a.filename.toLowerCase();
+    const nameB = b.filename.toLowerCase();
+
+    if (nameA < nameB) {
+      return -1;
+    } else if (nameA > nameB) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  let [photos, setPhotos] = useState(sortedPhotos);
+
   const [showGrid, setShowGrid] = useState(props.grid);
   let [startingPoint, setStartingPoint] = useState(1);
   let [scrollPosition, setScrollPosition] = useState(0);
   const { width, height } = useWindowSize();
+  const regex = /\/([^/]+)$/;
 
   useEffect(() => {
     setPhotos(props.images);
@@ -62,6 +76,8 @@ export default function ImageGallery(props) {
                           width: 'auto',
                         }}
                         src={image.image}
+                        filename={image.filename}
+                        folder={regex.exec(image.folder)}
                         key={image.id}
                         alt={startingPoint} //adding a counter to be know which image we clicked
                         onClick={(e) => {
