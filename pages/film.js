@@ -7,8 +7,6 @@ export default function Film() {
   let [videoMuted, setVideoMuted] = useState(true);
   let [loadVideo, setLoadVideo] = useState(false);
 
-  useEffect(() => {}, [console.log('hola')]);
-
   return (
     <>
       <div

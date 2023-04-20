@@ -3,73 +3,98 @@ import React from 'react';
 import styles from './../../styles/Home.module.scss';
 import { useState, useEffect } from 'react';
 import useWindowSize from '/useWindowSize';
+import HamburgerMenu from 'react-hamburger-menu';
 
 export default function NavBar() {
   const [togglePhoto, setTogglePhoto] = useState(false);
   const [toggleFilms, setToggleFilms] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [menuColor, setMenuColor] = useState('gray');
   const size = useWindowSize();
+
+  const menuClicked = () => {
+    setIsOpen(!isOpen);
+    setShowMenu(!showMenu);
+    if (menuColor === 'gray') {
+      setMenuColor('white');
+    } else {
+      setMenuColor('gray');
+    }
+  };
+
   return (
     <div>
       {size.width < 750 && (
         <div className={styles.phone_nav}>
-          <div
-            className={styles.nav__photography}
-            onMouseEnter={() => setTogglePhoto(!togglePhoto)}
-            onMouseLeave={() => setTogglePhoto(false)}
-          >
-            <Link href={''}>PROJECTS</Link>
-            {togglePhoto ? (
-              <div className={styles.phone_nav__photography__items}>
-                {/* <Link href={'/overview'}>OVERVIEW</Link> */}
-                <Link href={'/personal'} onClick={() => setTogglePhoto(false)}>
-                  PERSONAL
-                </Link>
-                <Link
-                  href={'/commissioned'}
-                  onClick={() => setTogglePhoto(false)}
-                >
-                  COMMISSIONED
-                </Link>
-              </div>
-            ) : (
-              <></>
-            )}
-          </div>
-          <div
-            className={styles.phone_nav__film}
-            // onMouseEnter={() => setToggleFilms(!toggleFilms)}
-            // onMouseLeave={() => setToggleFilms(false)}
-          >
-            <Link href={'/film'}>FILM</Link>
-            {toggleFilms ? (
-              <div className={styles.phone_nav__film__items}>
-                <Link
-                  href={'/films/grain'}
-                  onClick={() => setToggleFilms(false)}
-                >
-                  GRAIN
-                </Link>
-                <Link
-                  href={'/films/asiad'}
-                  onClick={() => setToggleFilms(false)}
-                >
-                  ASIAD
-                </Link>
-                <Link
-                  href={'/films/tainted'}
-                  onClick={() => setToggleFilms(false)}
-                >
-                  TAINTED
-                </Link>
-                {/* <Link href={'/films/commissioned'}>commissioned</Link> */}
-              </div>
-            ) : (
-              <></>
-            )}
-          </div>
-          <div className={styles.phone_nav__about}>
-            <Link href={'/about'}>ABOUT</Link>
-          </div>
+          {showMenu && (
+            <div className={styles.modal}>
+              <ul>
+                <li>
+                  {' '}
+                  <Link
+                    className={styles.modal_menu}
+                    href={'/'}
+                    onClick={menuClicked}
+                  >
+                    OVERVIEW
+                  </Link>
+                </li>
+                <li>
+                  {' '}
+                  <Link
+                    className={styles.modal_menu}
+                    href={'/commissioned'}
+                    onClick={menuClicked}
+                  >
+                    COMMISSIONED
+                  </Link>
+                </li>
+                <li>
+                  {' '}
+                  <Link
+                    className={styles.modal_menu}
+                    href={'/personal'}
+                    onClick={menuClicked}
+                  >
+                    PERSONAL
+                  </Link>
+                </li>
+                <li>
+                  {' '}
+                  <Link
+                    className={styles.modal_menu}
+                    href={'/film'}
+                    onClick={menuClicked}
+                  >
+                    FILM
+                  </Link>
+                </li>
+                <li>
+                  {' '}
+                  <Link
+                    className={styles.modal_menu}
+                    href={'/about'}
+                    onClick={menuClicked}
+                  >
+                    ABOUT
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
+          <HamburgerMenu
+            className={styles.hamberder}
+            isOpen={isOpen}
+            menuClicked={menuClicked}
+            width={28}
+            height={25}
+            strokeWidth={1.5}
+            rotate={0}
+            color={menuColor}
+            borderRadius={0}
+            animationDuration={0.5}
+          />
         </div>
       )}
       {size.width > 750 && (

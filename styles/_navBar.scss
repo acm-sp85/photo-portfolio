@@ -41,15 +41,11 @@
 }
 
 .phone_nav {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   height: 20px;
   z-index: 1;
   font-size: 1.5rem;
-  // background: none;
-  // background-color: transparent;
-  // background-color: white;
-  // padding: 5px;
+  margin-left: auto;
+  padding: 15px;
   position: fixed;
   width: 100%;
 
@@ -89,4 +85,42 @@
     mix-blend-mode: difference;
     align-self: baseline;
   }
+}
+
+.hamberder {
+  margin: 15px;
+  text-align: right;
+  margin-left: auto;
+  z-index: 101;
+}
+
+.modal {
+  margin-top: 45vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.3rem;
+  position: fixed;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(25, 25, 25, 0.9);
+  opacity: 1;
+}
+
+.modal_menu {
+  font-size: 3rem;
+  padding: 15px;
+  display: block;
+  align-items: right;
+  text-align: center;
 }
