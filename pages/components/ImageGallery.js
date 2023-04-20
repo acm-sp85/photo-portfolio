@@ -8,9 +8,8 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import useWindowSize from '/useWindowSize';
 
 export default function ImageGallery(props) {
-  let sortedPhotos = [];
-  if (props) {
-    console.log(props.images);
+  let sortedPhotos = null;
+  if (props.images) {
     sortedPhotos = props.images.sort((a, b) => {
       const nameA = a.filename.toLowerCase();
       const nameB = b.filename.toLowerCase();
