@@ -8,8 +8,8 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import useWindowSize from '/useWindowSize';
 
 export default function ImageGallery(props) {
-  let sortedPhotos = [];
   if (props.images) {
+    let sortedPhotos = [];
     sortedPhotos = props.images.sort((a, b) => {
       const nameA = a.filename.toLowerCase();
       const nameB = b.filename.toLowerCase();
@@ -22,91 +22,96 @@ export default function ImageGallery(props) {
         return 0;
       }
     });
-  }
-  let [photos, setPhotos] = useState(sortedPhotos);
 
-  const [showGrid, setShowGrid] = useState(props.grid);
-  let [startingPoint, setStartingPoint] = useState(1);
-  let [scrollPosition, setScrollPosition] = useState(0);
-  const { width, height } = useWindowSize();
-  const regex = /\/([^/]+)$/;
+    let [photos, setPhotos] = useState(sortedPhotos);
 
-  useEffect(() => {
-    setPhotos(props.images);
-    setStartingPoint(0);
-  }, [props]);
+    const [showGrid, setShowGrid] = useState(props.grid);
+    let [startingPoint, setStartingPoint] = useState(1);
+    let [scrollPosition, setScrollPosition] = useState(0);
+    const { width, height } = useWindowSize();
+    const regex = /\/([^/]+)$/;
 
-  const gridSwitch = () => {
-    if (width > 750) {
-      setShowGrid(!showGrid);
-    } else {
+    useEffect(() => {
+      setPhotos(props.images);
       setStartingPoint(0);
-    }
-  };
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+    }, [props]);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const gridSwitch = () => {
+      if (width > 750) {
+        setShowGrid(!showGrid);
+      } else {
+        setStartingPoint(0);
+      }
     };
-  }, []);
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+    };
 
-  return (
-    <div className={styles.image_gallery}>
-      {showGrid && (
-        <div style={{ padding: '80px' }}>
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
-          >
-            <Masonry gutter="80px">
-              {photos &&
-                photos.map((image) => {
-                  startingPoint++;
-                  return (
-                    <>
-                      <Image
-                        width="500"
-                        height="500"
-                        loading="lazy"
-                        // sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
-                        style={{
-                          height: 'auto',
-                          width: 'auto',
-                        }}
-                        src={image.image}
-                        filename={image.filename}
-                        folder={regex.exec(image.folder)}
-                        key={image.id}
-                        alt={startingPoint} //adding a counter to be know which image we clicked
-                        onClick={(e) => {
-                          setStartingPoint(e.target.alt);
-                          console.log(scrollPosition);
-                          gridSwitch();
-                        }}
-                      />
-                    </>
-                  );
-                })}
-            </Masonry>
-          </ResponsiveMasonry>
-        </div>
-      )}
-      {!showGrid && (
-        <div>
-          <Carousel
-            photos={photos}
-            gridSwitch={gridSwitch}
-            startingPoint={startingPoint}
-            setStartingPoint={setStartingPoint}
-          />
-          <p className={styles.assignmentName}>{props.folder}</p>
-        </div>
-      )}
-    </div>
-  );
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
+    return (
+      <div className={styles.image_gallery}>
+        {showGrid && (
+          <div style={{ padding: '80px' }}>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+            >
+              <Masonry gutter="80px">
+                {photos &&
+                  photos.map((image) => {
+                    startingPoint++;
+                    return (
+                      <>
+                        <Image
+                          width="500"
+                          height="500"
+                          loading="lazy"
+                          // sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
+                          style={{
+                            height: 'auto',
+                            width: 'auto',
+                          }}
+                          src={image.image}
+                          filename={image.filename}
+                          folder={regex.exec(image.folder)}
+                          key={image.id}
+                          alt={startingPoint} //adding a counter to be know which image we clicked
+                          onClick={(e) => {
+                            setStartingPoint(e.target.alt);
+                            console.log(scrollPosition);
+                            gridSwitch();
+                          }}
+                        />
+                      </>
+                    );
+                  })}
+              </Masonry>
+            </ResponsiveMasonry>
+          </div>
+        )}
+        {!showGrid && (
+          <div>
+            <Carousel
+              photos={photos}
+              gridSwitch={gridSwitch}
+              startingPoint={startingPoint}
+              setStartingPoint={setStartingPoint}
+            />
+            <p className={styles.assignmentName}>{props.folder}</p>
+          </div>
+        )}
+      </div>
+    );
+  } else {
+    return(
+      <div>err</div>
+    )
+  }
 }
