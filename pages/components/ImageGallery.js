@@ -9,18 +9,21 @@ import useWindowSize from '/useWindowSize';
 
 export default function ImageGallery(props) {
   let sortedPhotos = [];
-  sortedPhotos = props.images.sort((a, b) => {
-    const nameA = a.filename.toLowerCase();
-    const nameB = b.filename.toLowerCase();
+  if (props) {
+    console.log(props.images);
+    sortedPhotos = props.images.sort((a, b) => {
+      const nameA = a.filename.toLowerCase();
+      const nameB = b.filename.toLowerCase();
 
-    if (nameA < nameB) {
-      return -1;
-    } else if (nameA > nameB) {
-      return 1;
-    } else {
-      return 0;
-    }
-  });
+      if (nameA < nameB) {
+        return -1;
+      } else if (nameA > nameB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  }
 
   let [photos, setPhotos] = useState(sortedPhotos);
 
