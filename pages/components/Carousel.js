@@ -57,6 +57,9 @@ export default function Carousel({
         onClick={() => goLeft()}
         className={styles.arrows__left}
         fontSize="large"
+        style={{
+          cursor: 'pointer',
+        }}
       >
         left arrow
       </KeyboardArrowLeftIcon>
@@ -72,6 +75,7 @@ export default function Carousel({
             style={{
               height: '80vh',
               width: 'auto',
+              cursor: 'n-resize',
             }}
             src={images[counter].image}
             alt={images[counter].id}
@@ -87,6 +91,9 @@ export default function Carousel({
         onClick={() => goRight()}
         className={styles.arrows__right}
         fontSize="large"
+        style={{
+          cursor: 'pointer',
+        }}
       >
         right arrow
       </KeyboardArrowRightIcon>

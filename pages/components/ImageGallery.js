@@ -83,6 +83,7 @@ export default function ImageGallery(props) {
                         style={{
                           height: 'auto',
                           width: 'auto',
+                          cursor: 'pointer',
                         }}
                         src={image.image}
                         filename={image.filename}
