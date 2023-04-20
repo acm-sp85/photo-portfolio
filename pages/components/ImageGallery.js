@@ -10,7 +10,7 @@ import useWindowSize from '/useWindowSize';
 export default function ImageGallery(props) {
   let sortedPhotos = [];
   if (props.images) {
-    let sortedPhotos = props.images.sort((a, b) => {
+    sortedPhotos = props.images.sort((a, b) => {
       const nameA = a.filename.toLowerCase();
       const nameB = b.filename.toLowerCase();
 
