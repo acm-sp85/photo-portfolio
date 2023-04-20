@@ -8,18 +8,21 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import useWindowSize from '/useWindowSize';
 
 export default function ImageGallery(props) {
-  const sortedPhotos = props.images.sort((a, b) => {
-    const nameA = a.filename.toLowerCase();
-    const nameB = b.filename.toLowerCase();
+  let sortedPhotos = [];
+  if (props.images) {
+    let sortedPhotos = props.images.sort((a, b) => {
+      const nameA = a.filename.toLowerCase();
+      const nameB = b.filename.toLowerCase();
 
-    if (nameA < nameB) {
-      return -1;
-    } else if (nameA > nameB) {
-      return 1;
-    } else {
-      return 0;
-    }
-  });
+      if (nameA < nameB) {
+        return -1;
+      } else if (nameA > nameB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  }
   let [photos, setPhotos] = useState(sortedPhotos);
 
   const [showGrid, setShowGrid] = useState(props.grid);
