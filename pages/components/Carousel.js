@@ -10,6 +10,8 @@ export default function Carousel({
   gridSwitch,
   startingPoint,
   setStartingPoint,
+  y,
+  setY,
 }) {
   let [counter, setCounter] = useState(startingPoint - 1);
   let [images, setImages] = useState(photos);
@@ -74,6 +76,7 @@ export default function Carousel({
             src={images[counter].image}
             alt={images[counter].id}
             onClick={(e) => {
+              setY(y);
               setStartingPoint(0);
               gridSwitch();
             }}

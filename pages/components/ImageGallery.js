@@ -9,6 +9,7 @@ import useWindowSize from '/useWindowSize';
 
 export default function ImageGallery(props) {
   let sortedPhotos = null;
+
   if (props.images) {
     sortedPhotos = props.images.sort((a, b) => {
       const nameA = a.filename.toLowerCase();
@@ -29,6 +30,7 @@ export default function ImageGallery(props) {
   const [showGrid, setShowGrid] = useState(props.grid);
   let [startingPoint, setStartingPoint] = useState(1);
   let [scrollPosition, setScrollPosition] = useState(0);
+  let [y, setY] = useState(0);
   const { width, height } = useWindowSize();
   const regex = /\/([^/]+)$/;
 
@@ -52,12 +54,13 @@ export default function ImageGallery(props) {
   };
 
   useEffect(() => {
+    window.scrollTo(0, y);
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [showGrid]);
 
   return (
     <div className={styles.image_gallery}>
@@ -89,6 +92,7 @@ export default function ImageGallery(props) {
                         onClick={(e) => {
                           setStartingPoint(e.target.alt);
                           console.log(scrollPosition);
+                          setY(scrollPosition);
                           gridSwitch();
                         }}
                       />
@@ -106,6 +110,8 @@ export default function ImageGallery(props) {
             gridSwitch={gridSwitch}
             startingPoint={startingPoint}
             setStartingPoint={setStartingPoint}
+            setY={setY}
+            y={y}
           />
           <p className={styles.assignmentName}>{props.folder}</p>
         </div>

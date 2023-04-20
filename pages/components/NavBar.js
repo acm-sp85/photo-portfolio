@@ -67,7 +67,7 @@ export default function NavBar() {
                     href={'/film'}
                     onClick={menuClicked}
                   >
-                    FILM
+                    DIRECTOR
                   </Link>
                 </li>
                 <li>
@@ -113,7 +113,6 @@ export default function NavBar() {
             <Link href={''}>PROJECTS</Link>
             {togglePhoto ? (
               <div className={styles.nav__photography__items}>
-                {/* <Link href={'/overview'}>OVERVIEW</Link> */}
                 <Link href={'/personal'} onClick={() => setTogglePhoto(false)}>
                   PERSONAL
                 </Link>
@@ -129,7 +128,7 @@ export default function NavBar() {
             )}
           </div>
           <div className={styles.nav__film}>
-            <Link href={'/film'}>FILM</Link>
+            <Link href={'/film'}>DIRECTOR</Link>
           </div>
           <div className={styles.nav__about}>
             <Link href={'/about'}>ABOUT</Link>
