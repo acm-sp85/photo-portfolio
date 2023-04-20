@@ -37,7 +37,9 @@ export default function Commissioned() {
           zIndex: '-200',
         }}
       />
-      <div className={`${styles.list__block} ${styles.centered}`}>
+      <div
+        className={` ${styles.verticalAlign} ${styles.list__block} ${styles.centered} `}
+      >
         <ul className={styles.list}>
           <Link
             className={styles.list__name}

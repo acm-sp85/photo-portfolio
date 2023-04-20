@@ -1,6 +1,7 @@
 @import 'typography';
 @import 'imageGallery';
 @import 'navBar';
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/menu-grid-r.css');
 
 $color-primary: #f3a200;
 
@@ -11,6 +12,10 @@ $color-primary: #f3a200;
   justify-content: center;
   text-align: center;
   display: flex;
+}
+
+.verticalAlign {
+  padding: 30px;
 }
 
 .container {
@@ -285,6 +290,3 @@ $color-primary: #f3a200;
 .with__transition {
   transition: all 0.3s ease;
 }
-
-
-

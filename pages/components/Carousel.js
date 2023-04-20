@@ -52,51 +52,67 @@ export default function Carousel({
   }, [counter, goLeft, goRight, gridSwitch, setStartingPoint]);
 
   return (
-    <div className={styles.carouselContainer}>
-      <KeyboardArrowLeftIcon
-        onClick={() => goLeft()}
-        className={styles.arrows__left}
-        fontSize="large"
-        style={{
-          cursor: 'pointer',
-        }}
-      >
-        left arrow
-      </KeyboardArrowLeftIcon>
+    <div>
+      <div className={styles.carouselContainer}>
+        <KeyboardArrowLeftIcon
+          onClick={() => goLeft()}
+          className={styles.arrows__left}
+          fontSize="large"
+          style={{
+            cursor: 'pointer',
+          }}
+        >
+          left arrow
+        </KeyboardArrowLeftIcon>
 
-      {images && counter >= 0 && (
-        <div className={`${styles.photo__display} ${styles.centered}`}>
-          <Image
-            width="1500"
-            height="1500"
-            loading="lazy"
-            objectFit="contain"
-            sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
-            style={{
-              height: '80vh',
-              width: 'auto',
-              cursor: 'n-resize',
-            }}
-            src={images[counter].image}
-            alt={images[counter].id}
-            onClick={(e) => {
-              setY(y);
-              setStartingPoint(0);
-              gridSwitch();
-            }}
-          />
-        </div>
-      )}
-      <KeyboardArrowRightIcon
-        onClick={() => goRight()}
-        className={styles.arrows__right}
-        fontSize="large"
+        {images && counter >= 0 && (
+          <div className={`${styles.photo__display} ${styles.centered}`}>
+            <Image
+              width="1500"
+              height="1500"
+              loading="lazy"
+              objectFit="contain"
+              sizes="(min-width: 480px) 50vw , (min-width: 728px) 33vw, (min-width: 976px) 25vw"
+              style={{
+                height: '80vh',
+                width: 'auto',
+                cursor: 'n-resize',
+              }}
+              src={images[counter].image}
+              alt={images[counter].id}
+              onClick={(e) => {
+                setY(y);
+                setStartingPoint(0);
+                gridSwitch();
+              }}
+            />
+          </div>
+        )}
+        <KeyboardArrowRightIcon
+          onClick={() => goRight()}
+          className={styles.arrows__right}
+          fontSize="large"
+          style={{
+            cursor: 'pointer',
+          }}
+        >
+          right arrow
+        </KeyboardArrowRightIcon>
+      </div>
+      {/* <i
+        class="gg-menu-grid-r"
         style={{
+          color: 'black',
           cursor: 'pointer',
+          marginTop: '40px',
+          marginLeft: '50%',
         }}
-      >
-        right arrow
-      </KeyboardArrowRightIcon>
+        onClick={(e) => {
+          setY(y);
+          setStartingPoint(0);
+          gridSwitch();
+        }}
+      ></i> */}
     </div>
   );
 }
