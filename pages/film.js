@@ -11,10 +11,11 @@ export default function Film() {
     <>
       <div
         className={styles.video__card}
-        // style={{
-        //   backgroundImage: `url('https://res.cloudinary.com/acm-85/image/upload/v1676301440/photo-portfolio/films/Natalie-Stuart-lg_peaj0f.png')`,
-        //   opacity: '.5'
-        // }}
+        style={
+          {
+            // backgroundColor: 'gray',
+          }
+        }
       >
         <div className={styles.description}>
           <h3>GRAIN: ANALOG RENAISSANCE</h3>
@@ -53,6 +54,8 @@ export default function Film() {
           className={styles.player}
           allowfullscreen
         />
+
+        <i class={styles.arrowDown} />
       </div>
       <div className={styles.video__card}>
         <div className={styles.description}>
@@ -79,6 +82,7 @@ export default function Film() {
           className={styles.player}
           allowfullscreen
         />
+        <i class={styles.arrowDown} />
       </div>
       <div className={styles.video__card}>
         <div className={styles.description}>

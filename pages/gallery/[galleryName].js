@@ -22,8 +22,6 @@ export default function Gallery({ images, nextCursor, folders, grid }) {
         />
       )}
       {width > 750 && <ImageGallery images={images} grid={grid} />}
-      {/* <ImageGallery images={images} grid={grid} /> */}
-      {/* <ImageGallery images={images} showGrid={false} grid={grid} /> */}
     </div>
   );
 }
