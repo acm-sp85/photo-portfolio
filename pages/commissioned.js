@@ -87,6 +87,17 @@ export default function Commissioned() {
           </Link>
           <Link
             className={styles.list__name}
+            href={'/commissioned/loftie'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1682970323/photo-portfolio/commercial/hero-images/LoftieKids_2_nfqmmj.jpg'
+              )
+            }
+          >
+            Loftie
+          </Link>
+          <Link
+            className={styles.list__name}
             href={'/commissioned/vogue'}
             onMouseEnter={() =>
               setBackgroundImage(

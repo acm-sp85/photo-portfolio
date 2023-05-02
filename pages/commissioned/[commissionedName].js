@@ -39,6 +39,7 @@ export async function getStaticPaths() {
     paths: [
       { params: { commissionedName: 'chase-bank' } },
       { params: { commissionedName: 'vogue' } },
+      { params: { commissionedName: 'loftie' } },
       { params: { commissionedName: 'telva' } },
       { params: { commissionedName: 'off-white' } },
       { params: { commissionedName: 'sylvain' } },
