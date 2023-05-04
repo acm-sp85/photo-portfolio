@@ -44,6 +44,8 @@ export async function getStaticPaths() {
       { params: { commissionedName: 'off-white' } },
       { params: { commissionedName: 'sylvain' } },
       { params: { commissionedName: 'pace' } },
+      { params: { commissionedName: 'freepik' } },
+      { params: { commissionedName: 'drjart' } },
       { params: { commissionedName: 'demelier' } },
       { params: { commissionedName: 'ismine' } },
       { params: { commissionedName: 'kionita' } },

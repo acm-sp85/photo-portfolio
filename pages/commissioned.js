@@ -87,6 +87,17 @@ export default function Commissioned() {
           </Link>
           <Link
             className={styles.list__name}
+            href={'/commissioned/freepik'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1683149142/photo-portfolio/commercial/hero-images/hero_freepik_ewejs8.jpg'
+              )
+            }
+          >
+            FreePik
+          </Link>
+          <Link
+            className={styles.list__name}
             href={'/commissioned/loftie'}
             onMouseEnter={() =>
               setBackgroundImage(
@@ -95,6 +106,17 @@ export default function Commissioned() {
             }
           >
             Loftie
+          </Link>
+          <Link
+            className={styles.list__name}
+            href={'/commissioned/drjart'}
+            onMouseEnter={() =>
+              setBackgroundImage(
+                'https://res.cloudinary.com/acm-85/image/upload/v1683207776/photo-portfolio/commercial/hero-images/Dermaclear.mov.00_00_02_16.Still003_copy_ql0w03.jpg'
+              )
+            }
+          >
+            DrJart+
           </Link>
           <Link
             className={styles.list__name}
