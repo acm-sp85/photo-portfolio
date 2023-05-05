@@ -2,13 +2,19 @@ import React from 'react';
 import styles from '../styles/Home.module.scss';
 import ReactPlayer from 'react-player';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Film() {
   let [videoMuted, setVideoMuted] = useState(true);
   let [loadVideo, setLoadVideo] = useState(false);
 
   return (
-    <>
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <div
         className={styles.video__card}
         style={
@@ -109,7 +115,7 @@ export default function Film() {
           allowfullscreen
         />
       </div>
-    </>
+    </motion.div>
   );
 }
 

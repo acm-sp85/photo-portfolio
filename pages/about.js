@@ -2,12 +2,19 @@ import React from 'react';
 import styles from '../styles/Home.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function about() {
   return (
     // <li className={`${styles.projectsPdText} ${styles.projectsPdSubdetail}`}>
 
-    <div className={`${styles.about__container} ${styles.centered}`}>
+    <motion.div
+      className={`${styles.about__container} ${styles.centered}`}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className={styles.about__left}>
         <p className={styles.about__text}>
           Alex Contell is a photographer and filmmaker with a Master&apos;s
@@ -21,7 +28,7 @@ export default function about() {
           documentary, &lsquo;GRAIN&lsquo; premiered at the DOC NYC Film
           Festival in New York City after four years of production. The film has
           since been shown at several international film festivals.
-        </p>  
+        </p>
         {/* <p className={styles.about__text}>
           CLIENTS Vogue | The Sunday Times | JPM Chase | The Tennis Channel |
           Spotify | MTV | Nike | Off-White | Studio Rondinone | SYLVAIN |
@@ -72,6 +79,6 @@ export default function about() {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

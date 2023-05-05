@@ -1,10 +1,17 @@
 import React from 'react';
 import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function Projects() {
   return (
-    <div className={styles.projects}>
+    <motion.div
+      className={styles.projects}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className={styles.projects__commissioned}>
         <div
           className={` ${styles.verticalAlign} ${styles.list__block} ${styles.centered} `}
@@ -27,6 +34,6 @@ export default function Projects() {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

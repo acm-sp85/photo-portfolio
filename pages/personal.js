@@ -2,15 +2,20 @@ import React from 'react';
 import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Personal() {
   const blackBackground =
     'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg';
   let [backgroundImage, setBackgroundImage] = useState(blackBackground);
   return (
-    <>
-      <div
-        className={styles.with__transition}
+    <div>
+      <motion.div
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        className={styles.with__transition} 
         style={{
           backgroundColor: 'blue',
           width: '100%',
@@ -106,6 +111,6 @@ export default function Personal() {
           </Link> */}
         </ul>
       </div>
-    </>
+    </div>
   );
 }
