@@ -87,14 +87,32 @@ $color-primary: #f3a200;
   display: grid;
   grid-template-columns: 50vw 50vw;
   min-height: 100vh;
-
-  // @media (max-width: 750px) {
-  //   display: block;
-  //   padding-top: 50px;
-  //   min-height: auto;
-  //   height: auto;
-  // }
 }
+
+.projects__commissioned,
+.projects__personal {
+  opacity: 0.9;
+  background: black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.projects__commissioned {
+  background-image: url('https://res.cloudinary.com/acm-85/image/upload/v1671572656/photo-portfolio/commercial/pace/_H2A7126_t5qgqa.jpg');
+}
+
+.projects__personal {
+  background-image: url('https://res.cloudinary.com/acm-85/image/upload/v1675254182/photo-portfolio/personal/street-studies/Street-Studies-66_tkxugr.jpg');
+}
+
+.projects__commissioned:hover,
+.projects__personal:hover {
+  opacity: 1;
+  transform: scale(1.005);
+}
+
 // VIDEO --------------------------------------
 
 .video__card {
@@ -153,8 +171,9 @@ $color-primary: #f3a200;
   // display: inline-block;
 
   > * {
-    font-size: 3rem;
-    color: rgb(201, 201, 201);
+    // font-size: 3rem;
+    font-size: 2vw;
+    color: rgb(255, 255, 255);
     font-weight: 400;
     text-transform: uppercase;
     @media (max-width: 750px) {

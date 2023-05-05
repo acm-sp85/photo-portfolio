@@ -5,17 +5,7 @@ import Link from 'next/link';
 export default function Projects() {
   return (
     <div className={styles.projects}>
-      <div
-        style={{
-          background: 'grey',
-
-          backgroundImage: `url(
-               'https://res.cloudinary.com/acm-85/image/upload/v1671572656/photo-portfolio/commercial/pace/_H2A7126_t5qgqa.jpg' )`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <div className={styles.projects__commissioned}>
         <div
           className={` ${styles.verticalAlign} ${styles.list__block} ${styles.centered} `}
         >
@@ -26,16 +16,7 @@ export default function Projects() {
           </ul>
         </div>
       </div>
-      <div
-        style={{
-          background: 'grey',
-          backgroundImage: `url(
-             'https://res.cloudinary.com/acm-85/image/upload/v1675254191/photo-portfolio/personal/street-studies/Street-Studies-116_upuywo.jpg')`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <div className={styles.projects__personal}>
         <div
           className={` ${styles.verticalAlign} ${styles.list__block} ${styles.centered} `}
         >

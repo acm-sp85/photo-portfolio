@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Travel() {
   const blackBackground =
-    'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg';
+    'https://res.cloudinary.com/acm-85/image/upload/v1674516421/photo-portfolio/personal/oaxaca/oaxaca-76_eatfsl.jpg';
   let [backgroundImage, setBackgroundImage] = useState(blackBackground);
   return (
     <>
