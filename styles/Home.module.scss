@@ -81,7 +81,20 @@ $color-primary: #f3a200;
 .masons {
   margin-top: 30px;
 }
+//  PROJECTS LANDING -------------
 
+.projects {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  min-height: 100vh;
+
+  // @media (max-width: 750px) {
+  //   display: block;
+  //   padding-top: 50px;
+  //   min-height: auto;
+  //   height: auto;
+  // }
+}
 // VIDEO --------------------------------------
 
 .video__card {

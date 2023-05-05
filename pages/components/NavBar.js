@@ -7,7 +7,6 @@ import HamburgerMenu from 'react-hamburger-menu';
 
 export default function NavBar() {
   const [togglePhoto, setTogglePhoto] = useState(false);
-  const [toggleFilms, setToggleFilms] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [menuColor, setMenuColor] = useState('gray');
@@ -105,27 +104,8 @@ export default function NavBar() {
           <div className={styles.nav__overview}>
             <Link href={'/'}>OVERVIEW</Link>
           </div>
-          <div
-            className={styles.nav__photography}
-            onMouseEnter={() => setTogglePhoto(!togglePhoto)}
-            onMouseLeave={() => setTogglePhoto(false)}
-          >
-            <Link href={''}>PROJECTS</Link>
-            {togglePhoto ? (
-              <div className={styles.nav__photography__items}>
-                <Link href={'/personal'} onClick={() => setTogglePhoto(false)}>
-                  PERSONAL
-                </Link>
-                <Link
-                  href={'/commissioned'}
-                  onClick={() => setTogglePhoto(false)}
-                >
-                  COMMISSIONED
-                </Link>
-              </div>
-            ) : (
-              <></>
-            )}
+          <div className={styles.nav__photography}>
+            <Link href={'/projects'}>PROJECTS</Link>
           </div>
           <div className={styles.nav__film}>
             <Link href={'/film'}>DIRECTOR</Link>
