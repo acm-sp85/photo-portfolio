@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Personal() {
   const blackBackground =
@@ -15,7 +16,7 @@ export default function Personal() {
         animate={{ y: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className={styles.with__transition} 
+        className={styles.with__transition}
         style={{
           backgroundColor: 'blue',
           width: '100%',
@@ -30,7 +31,7 @@ export default function Personal() {
           backgroundRepeat: 'no-repeat',
           zIndex: '-100',
         }}
-      />
+      ></motion.div>
       <div
         className={styles.with__transition}
         style={{
@@ -50,6 +51,7 @@ export default function Personal() {
           <Link
             className={styles.list__name}
             href={'gallery/street-studies'}
+            prefetch
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg'
@@ -63,6 +65,7 @@ export default function Personal() {
           <Link
             className={styles.list__name}
             href={'ram'}
+            prefetch
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg'
@@ -76,6 +79,7 @@ export default function Personal() {
           <Link
             className={styles.list__name}
             href={'gallery/old-old-ny'}
+            prefetch
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg'
@@ -88,6 +92,7 @@ export default function Personal() {
           <Link
             className={`${styles.list__name} ${styles.with__transition}`}
             href={'/travel'}
+            prefetch
             onMouseEnter={() =>
               setBackgroundImage(
                 'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg'
