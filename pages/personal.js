@@ -4,13 +4,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { stagger, fadeInUp } from './animationConstants';
 
 export default function Personal() {
   const blackBackground =
     'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg';
   let [backgroundImage, setBackgroundImage] = useState(blackBackground);
   return (
-    <div>
+    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0 }}
@@ -31,7 +32,7 @@ export default function Personal() {
           backgroundRepeat: 'no-repeat',
           zIndex: '-100',
         }}
-      ></motion.div>
+      />
       <div
         className={styles.with__transition}
         style={{
@@ -47,75 +48,69 @@ export default function Personal() {
         className={`${styles.list__block} ${styles.centered}`}
         style={{ height: '100vh', zIndex: '100' }}
       >
-        <ul className={styles.list}>
-          <Link
-            className={styles.list__name}
-            href={'gallery/street-studies'}
-            prefetch
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg'
-              )
-            }
-            onMouseLeave={() => setBackgroundImage(blackBackground)}
-          >
-            Street Studies
-          </Link>
-
-          <Link
-            className={styles.list__name}
-            href={'ram'}
-            prefetch
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg'
-              )
-            }
-            onMouseLeave={() => setBackgroundImage(blackBackground)}
-          >
-            Random Access Memory
-          </Link>
-
-          <Link
-            className={styles.list__name}
-            href={'gallery/old-old-ny'}
-            prefetch
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg'
-              )
-            }
-            onMouseLeave={() => setBackgroundImage(blackBackground)}
-          >
-            Old Old New York
-          </Link>
-          <Link
-            className={`${styles.list__name} ${styles.with__transition}`}
-            href={'/travel'}
-            prefetch
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg'
-              )
-            }
-            onMouseLeave={() => setBackgroundImage(blackBackground)}
-          >
-            Travel Log
-          </Link>
-          {/* <Link
-          className={styles.list__name}
-            href={'gallery/dontttwice'}
-            onMouseEnter={() =>
-              setBackgroundImage(
-                'https://res.cloudinary.com/acm-85/image/upload/v1674300863/photo-portfolio/commercial/hero-images/Screen_Shot_2023-01-21_at_6.32.48_AM_rq3oxl.png'
-              )
-            }
-            onMouseLeave={() => setBackgroundImage(blackBackground)}
-          >
-            Don&apos;t Think Twice
-          </Link> */}
-        </ul>
+        <motion.ul
+          variants={stagger}
+          className={styles.list}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div exit={{ opacity: 0 }} variants={fadeInUp}>
+            <Link
+              className={styles.list__name}
+              href={'gallery/street-studies'}
+              onMouseEnter={() =>
+                setBackgroundImage(
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg'
+                )
+              }
+              onMouseLeave={() => setBackgroundImage(blackBackground)}
+            >
+              Street Studies
+            </Link>
+          </motion.div>
+          <motion.div exit={{ opacity: 0 }} variants={fadeInUp}>
+            <Link
+              className={styles.list__name}
+              href={'ram'}
+              onMouseEnter={() =>
+                setBackgroundImage(
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg'
+                )
+              }
+              onMouseLeave={() => setBackgroundImage(blackBackground)}
+            >
+              Random Access Memory
+            </Link>
+          </motion.div>
+          <motion.div exit={{ opacity: 0 }} variants={fadeInUp}>
+            <Link
+              className={styles.list__name}
+              href={'gallery/old-old-ny'}
+              onMouseEnter={() =>
+                setBackgroundImage(
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg'
+                )
+              }
+              onMouseLeave={() => setBackgroundImage(blackBackground)}
+            >
+              Old Old New York
+            </Link>
+          </motion.div>
+          <motion.div exit={{ opacity: 0 }} variants={fadeInUp}>
+            <Link
+              className={`${styles.list__name} ${styles.with__transition}`}
+              href={'/travel'}
+              onMouseEnter={() =>
+                setBackgroundImage(
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg'
+                )
+              }
+              onMouseLeave={() => setBackgroundImage(blackBackground)}
+            >
+              Travel Log
+            </Link>
+          </motion.div>
+        </motion.ul>
       </div>
-    </div>
+    </motion.div>
   );
 }

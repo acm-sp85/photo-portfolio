@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Carousel from './Carousel';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import useWindowSize from '/useWindowSize';
+import { motion } from 'framer-motion';
 
 export default function ImageGallery(props) {
   let sortedPhotos = null;

@@ -14,6 +14,7 @@ export default function about() {
       animate={{ y: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
+      exit={{ opacity: 0 }}
     >
       <div className={styles.about__left}>
         <p className={styles.about__text}>
@@ -30,9 +31,9 @@ export default function about() {
           since been shown at several international film festivals.
         </p>
         {/* <p className={styles.about__text}>
-          CLIENTS Vogue | The Sunday Times | JPM Chase | The Tennis Channel |
-          Spotify | MTV | Nike | Off-White | Studio Rondinone | SYLVAIN |
-          Arizona Beverage Company | Union Savings Bank | Telva{' '}
+          CLIENTS Vogue | The Sunday Times | JPM Chase | DrJart+ | The Tennis
+          Channel | Spotify | MTV | Nike | Off-White | Studio Rondinone |
+          SYLVAIN | Arizona Beverage Company | Union Savings Bank | Telva{' '}
         </p> */}
       </div>
       <div className={styles.about__right}>

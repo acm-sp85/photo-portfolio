@@ -4,6 +4,7 @@ import { search, mapImageResources, getFolders } from '../../lib/cloudinary';
 import ImageGallery from '../components/ImageGallery';
 import styles from '../../styles/Home.module.scss';
 import useWindowSize from '/useWindowSize';
+import { motion } from 'framer-motion';
 
 export default function Gallery({ images, nextCursor, folders, grid }) {
   let router = useRouter();
@@ -11,7 +12,7 @@ export default function Gallery({ images, nextCursor, folders, grid }) {
   let [photosToDisplay, setPhotosToDisplay] = useState(images);
   const { width, height } = useWindowSize();
   return (
-    <div>
+    <motion.div exit={{ opacity: 0 }}>
       <h1 className={styles.sectionTitle}>{router.query.galleryName}</h1>
       {width < 750 && (
         <ImageGallery
@@ -22,7 +23,7 @@ export default function Gallery({ images, nextCursor, folders, grid }) {
         />
       )}
       {width > 750 && <ImageGallery images={images} grid={grid} />}
-    </div>
+    </motion.div>
   );
 }
 

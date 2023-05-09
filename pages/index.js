@@ -13,6 +13,7 @@ export default function Overview({ images }) {
       animate={{ y: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
+      exit={{ opacity: 0 }}
     >
       <h1 className={styles.sectionTitle}>overview</h1>
       {width < 750 && <ImageGallery images={images} grid={true} />}

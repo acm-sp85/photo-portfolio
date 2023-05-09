@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Image from 'next/image';
+import { CldImage } from 'next-cloudinary';
 import styles from './../../styles/Home.module.scss';
 import { useState, useEffect } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -67,7 +68,7 @@ export default function Carousel({
 
         {images && counter >= 0 && (
           <div className={`${styles.photo__display} ${styles.centered}`}>
-            <Image
+            <CldImage
               width="1500"
               height="1500"
               loading="lazy"

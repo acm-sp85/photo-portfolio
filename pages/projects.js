@@ -23,6 +23,7 @@ export default function Projects() {
           </ul>
         </div>
       </div>
+
       <div className={styles.projects__personal}>
         <div
           className={` ${styles.verticalAlign} ${styles.list__block} ${styles.centered} `}
