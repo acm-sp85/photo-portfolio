@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { stagger, fadeInUp } from './animationConstants';
+import { stagger, fadeInUp } from '../animationConstants';
+
 
 export default function Personal() {
   const blackBackground =

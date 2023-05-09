@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { stagger, fadeInUp } from './animationConstants';
+import { stagger, fadeInUp } from '../animationConstants';
 
 export default function Travel() {
   const blackBackground =
