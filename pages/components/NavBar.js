@@ -108,7 +108,7 @@ export default function NavBar() {
             <Link href={'/projects'}>PROJECTS</Link>
           </div>
           <div className={styles.nav__film}>
-            <Link href={'/film'}>DIRECTOR</Link>
+            <Link href={'/film-landing'}>DIRECTOR</Link>
           </div>
           <div className={styles.nav__about}>
             <Link href={'/about'}>ABOUT</Link>
