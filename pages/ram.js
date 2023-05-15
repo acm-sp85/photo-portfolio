@@ -22,8 +22,10 @@ export default function Ram({ images }) {
           <Image
             className={`${styles.ram__images} ${styles.centered}`}
             src={memories[counter].image}
-            width={memories[counter].width}
-            height={memories[counter].height}
+            // width={memories[counter].width}
+            // height={memories[counter].height}
+            width={1000}
+            height={1000}
             objectFit="contain"
             alt={counter}
             onClick={() => {
