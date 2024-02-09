@@ -6,13 +6,13 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { stagger, fadeInUp } from '../animationConstants';
 
-
 export default function Personal() {
   const blackBackground =
     'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg';
   let [backgroundImage, setBackgroundImage] = useState(blackBackground);
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0 }}

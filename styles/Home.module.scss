@@ -87,6 +87,7 @@ $color-primary: #f3a200;
   display: grid;
   grid-template-columns: 50vw 50vw;
   min-height: 100vh;
+  background-color: black;
 }
 
 .projects__commissioned,
@@ -100,10 +101,14 @@ $color-primary: #f3a200;
 }
 
 .projects__commissioned {
+  // -webkit-transition: background-image 0.2s ease-in-out;
+  // transition: background-image 0.2s ease-in-out;
+  background-color: black;
   background-image: url('https://res.cloudinary.com/acm-85/image/upload/v1671572656/photo-portfolio/commercial/pace/_H2A7126_t5qgqa.jpg');
 }
 
 .projects__personal {
+  background-color: black;
   background-image: url('https://res.cloudinary.com/acm-85/image/upload/v1675254182/photo-portfolio/personal/street-studies/Street-Studies-66_tkxugr.jpg');
 }
 
@@ -165,6 +170,7 @@ $color-primary: #f3a200;
   display: grid;
   grid-template-columns: 33.3vw 33.3vw 33.3vw;
   grid-template-rows: 33.3vh 33.3vh 33.3vh;
+  background-color: black;
 
   > p {
     width: '100%';

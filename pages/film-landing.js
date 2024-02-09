@@ -16,7 +16,13 @@ export default function FilmsLanding() {
   let [showErin, setShowErin] = useState(false);
   let [showOmar, setShowOmar] = useState(false);
   return (
-    <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      exit={{ opacity: 0 }}
+    >
       <motion.div variants={stagger} className={styles.video__landing}>
         <div
           style={{
