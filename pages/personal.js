@@ -8,11 +8,10 @@ import { stagger, fadeInUp } from '../animationConstants';
 
 export default function Personal() {
   const blackBackground =
-    'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg';
+    'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg?preload';
   let [backgroundImage, setBackgroundImage] = useState(blackBackground);
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
-
       <motion.div
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0 }}
@@ -58,9 +57,10 @@ export default function Personal() {
             <Link
               className={styles.list__name}
               href={'gallery/street-studies'}
+              rel="preload"
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg?preload'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}
@@ -71,10 +71,11 @@ export default function Personal() {
           <motion.div exit={{ opacity: 0 }} variants={fadeInUp}>
             <Link
               className={styles.list__name}
+              rel="preload"
               href={'ram'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg?preload'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}
@@ -85,10 +86,11 @@ export default function Personal() {
           <motion.div exit={{ opacity: 0 }} variants={fadeInUp}>
             <Link
               className={styles.list__name}
+              rel="preload"
               href={'gallery/old-old-ny'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg?preload'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}
@@ -99,10 +101,11 @@ export default function Personal() {
           <motion.div exit={{ opacity: 0 }} variants={fadeInUp}>
             <Link
               className={`${styles.list__name} ${styles.with__transition}`}
+              rel="preload"
               href={'/travel'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg?preload'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}

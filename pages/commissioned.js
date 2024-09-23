@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function Commissioned() {
   const whiteBackground =
-    'https://res.cloudinary.com/acm-85/image/upload/v1681925803/photo-portfolio/commercial/hero-images/overview-63_k72iwu.jpg';
+    'https://res.cloudinary.com/acm-85/image/upload/v1681925803/photo-portfolio/commercial/hero-images/overview-63_k72iwu.jpg?preload';
   let [backgroundImage, setBackgroundImage] = useState(whiteBackground);
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
@@ -48,7 +48,7 @@ export default function Commissioned() {
               href={'/commissioned/uag'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1681925803/photo-portfolio/commercial/hero-images/overview-63_k72iwu.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1681925803/photo-portfolio/commercial/hero-images/overview-63_k72iwu.jpg?preload'
                 )
               }
             >
@@ -60,7 +60,7 @@ export default function Commissioned() {
               href={'/commissioned/sylvain'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674491071/photo-portfolio/commercial/hero-images/sylvain-1_tme442.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674491071/photo-portfolio/commercial/hero-images/sylvain-1_tme442.jpg?preload'
                 )
               }
             >
@@ -72,7 +72,7 @@ export default function Commissioned() {
               href={'/commissioned/off-white'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674481537/photo-portfolio/commercial/hero-images/off-white-1_kxizck.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674481537/photo-portfolio/commercial/hero-images/off-white-1_kxizck.jpg?preload'
                 )
               }
             >
@@ -84,7 +84,7 @@ export default function Commissioned() {
               href={'/commissioned/chase-bank'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674217616/photo-portfolio/commercial/hero-images/_H2A9368-1_z6uvrh.jpg?preload'
                 )
               }
             >
@@ -96,7 +96,7 @@ export default function Commissioned() {
               href={'/commissioned/freepik'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1683149142/photo-portfolio/commercial/hero-images/hero_freepik_ewejs8.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1683149142/photo-portfolio/commercial/hero-images/hero_freepik_ewejs8.jpg?preload'
                 )
               }
             >
@@ -108,7 +108,7 @@ export default function Commissioned() {
               href={'/commissioned/loftie'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1682970323/photo-portfolio/commercial/hero-images/LoftieKids_2_nfqmmj.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1682970323/photo-portfolio/commercial/hero-images/LoftieKids_2_nfqmmj.jpg?preload'
                 )
               }
             >
@@ -120,7 +120,7 @@ export default function Commissioned() {
               href={'/commissioned/drjart'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1683207776/photo-portfolio/commercial/hero-images/Dermaclear.mov.00_00_02_16.Still003_copy_ql0w03.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1683207776/photo-portfolio/commercial/hero-images/Dermaclear.mov.00_00_02_16.Still003_copy_ql0w03.jpg?preload'
                 )
               }
             >
@@ -132,7 +132,7 @@ export default function Commissioned() {
               href={'/commissioned/vogue'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674476528/photo-portfolio/commercial/hero-images/_MG_5091_du2qpw.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674476528/photo-portfolio/commercial/hero-images/_MG_5091_du2qpw.jpg?preload'
                 )
               }
             >
@@ -145,7 +145,7 @@ export default function Commissioned() {
               href={'/commissioned/telva'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674478322/photo-portfolio/commercial/hero-images/Telva-12_nxofkn.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674478322/photo-portfolio/commercial/hero-images/Telva-12_nxofkn.jpg?preload'
                 )
               }
             >
@@ -158,7 +158,7 @@ export default function Commissioned() {
               href={'/commissioned/henry-julier'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674494298/photo-portfolio/commercial/henry-julier/henry-julier-5_d7via9.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674494298/photo-portfolio/commercial/henry-julier/henry-julier-5_d7via9.jpg?preload'
                 )
               }
             >
@@ -170,7 +170,7 @@ export default function Commissioned() {
               href={'/commissioned/arizona'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674495450/photo-portfolio/commercial/arizona/Arizona-3_eiqb3n.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674495450/photo-portfolio/commercial/arizona/Arizona-3_eiqb3n.jpg?preload'
                 )
               }
             >
@@ -182,7 +182,7 @@ export default function Commissioned() {
               href={'/commissioned/olea'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1672158055/photo-portfolio/commercial/olea/Olea1545_viviy7.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1672158055/photo-portfolio/commercial/olea/Olea1545_viviy7.jpg?preload'
                 )
               }
             >
@@ -195,7 +195,7 @@ export default function Commissioned() {
               href={'/commissioned/pace'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674217789/photo-portfolio/commercial/hero-images/_H2A7126_jwf83a.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674217789/photo-portfolio/commercial/hero-images/_H2A7126_jwf83a.jpg?preload'
                 )
               }
             >
@@ -207,7 +207,7 @@ export default function Commissioned() {
               href={'/commissioned/nuvolari'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1675277903/photo-portfolio/commercial/hero-images/nuvolari-6_kztbry.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1675277903/photo-portfolio/commercial/hero-images/nuvolari-6_kztbry.jpg?preload'
                 )
               }
             >
@@ -219,7 +219,7 @@ export default function Commissioned() {
               href={'/commissioned/usb'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1675374678/photo-portfolio/commercial/hero-images/USB-_Dance_etc-4_sho8xi.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1675374678/photo-portfolio/commercial/hero-images/USB-_Dance_etc-4_sho8xi.jpg?preload'
                 )
               }
             >
@@ -231,7 +231,7 @@ export default function Commissioned() {
               href={'/commissioned/airama'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1675375053/photo-portfolio/commercial/hero-images/Airama-1_kldudw.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1675375053/photo-portfolio/commercial/hero-images/Airama-1_kldudw.jpg?preload'
                 )
               }
             >
@@ -243,7 +243,7 @@ export default function Commissioned() {
               href={'/commissioned/sunday-times'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1675375192/photo-portfolio/commercial/hero-images/sunday-times-7_xc0mqz.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1675375192/photo-portfolio/commercial/hero-images/sunday-times-7_xc0mqz.jpg?preload'
                 )
               }
             >
@@ -255,7 +255,7 @@ export default function Commissioned() {
               href={'/commissioned/wok-bao'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674482319/photo-portfolio/commercial/hero-images/_H2A6769-1_bhhfyp.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674482319/photo-portfolio/commercial/hero-images/_H2A6769-1_bhhfyp.jpg?preload'
                 )
               }
             >
@@ -267,7 +267,7 @@ export default function Commissioned() {
               href={'/commissioned/dazzler'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674483474/photo-portfolio/commercial/hero-images/Dazzler-4_let0jp.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674483474/photo-portfolio/commercial/hero-images/Dazzler-4_let0jp.jpg?preload'
                 )
               }
             >
@@ -279,7 +279,7 @@ export default function Commissioned() {
               href={'/commissioned/stone-island'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1671752257/photo-portfolio/commercial/stone-island/Stone_Island0004_ney899.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1671752257/photo-portfolio/commercial/stone-island/Stone_Island0004_ney899.jpg?preload'
                 )
               }
             >
@@ -292,7 +292,7 @@ export default function Commissioned() {
               href={'/commissioned/mrka'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674488361/photo-portfolio/commercial/hero-images/MRKA-sho-1_psn6vo.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674488361/photo-portfolio/commercial/hero-images/MRKA-sho-1_psn6vo.jpg?preload'
                 )
               }
             >
@@ -304,7 +304,7 @@ export default function Commissioned() {
               href={'/commissioned/lonely-clay'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674492869/photo-portfolio/commercial/hero-images/ceramics_30_zjqamu.jpg'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674492869/photo-portfolio/commercial/hero-images/ceramics_30_zjqamu.jpg?preload'
                 )
               }
             >
