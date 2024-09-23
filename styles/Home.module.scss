@@ -57,7 +57,9 @@ $color-primary: #f3a200;
 .xmasonry .xblock {
   animation: comeIn ease 0.5s;
   animation-iteration-count: 1;
-  transition: left 0.3s ease, top 0.3s ease;
+  transition:
+    left 0.3s ease,
+    top 0.3s ease;
 }
 
 .card {
@@ -365,4 +367,8 @@ $color-primary: #f3a200;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -100;
+}
+
+.underlineLink {
+  text-decoration: underline;
 }
