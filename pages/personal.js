@@ -8,7 +8,7 @@ import { stagger, fadeInUp } from '../animationConstants';
 
 export default function Personal() {
   const blackBackground =
-    'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg?preload';
+    'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg';
   let [backgroundImage, setBackgroundImage] = useState(blackBackground);
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
@@ -58,9 +58,11 @@ export default function Personal() {
               className={styles.list__name}
               href={'gallery/street-studies'}
               rel="preload"
+              priority
+              loading="lazy"
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg?preload'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222758/photo-portfolio/commercial/hero-images/_MG_1588-as-Smart-Object-1_axr644_fuhfmz.jpg'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}
@@ -72,10 +74,12 @@ export default function Personal() {
             <Link
               className={styles.list__name}
               rel="preload"
+              priority
+              loading="lazy"
               href={'ram'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg?preload'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674246738/photo-portfolio/commercial/hero-images/89240017_rjivd6.jpg'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}
@@ -87,10 +91,12 @@ export default function Personal() {
             <Link
               className={styles.list__name}
               rel="preload"
+              priority
+              loading="lazy"
               href={'gallery/old-old-ny'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg?preload'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222721/photo-portfolio/commercial/hero-images/Alex_Contell_-_Timeless_New_York-20_hagdc2.jpg'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}
@@ -102,10 +108,12 @@ export default function Personal() {
             <Link
               className={`${styles.list__name} ${styles.with__transition}`}
               rel="preload"
+              priority
+              loading="lazy"
               href={'/travel'}
               onMouseEnter={() =>
                 setBackgroundImage(
-                  'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg?preload'
+                  'https://res.cloudinary.com/acm-85/image/upload/v1674222649/photo-portfolio/commercial/hero-images/0437_pjgp4d.jpg'
                 )
               }
               onMouseLeave={() => setBackgroundImage(blackBackground)}

@@ -63,7 +63,7 @@ export default function NavBar() {
                   {' '}
                   <Link
                     className={styles.modal_menu}
-                    href={'/film'}
+                    href={'/film-landing'}
                     onClick={menuClicked}
                   >
                     DIRECTOR
