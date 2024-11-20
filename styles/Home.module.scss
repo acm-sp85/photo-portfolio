@@ -199,7 +199,7 @@ $color-primary: #f3a200;
 
 @media (max-width: 768px) {
   .video__landing {
-    grid-template-columns: repeat(1, 100vh); /* Single column */
+    grid-template-columns: repeat(1, 50vh); /* Single column */
     grid-template-rows: repeat(9, 30vh);    /* Rows adjust to content */
   }
 
